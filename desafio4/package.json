@@ -1,0 +1,19 @@
+{
+  "name": "desafio4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --inspect server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^8.10.0"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
