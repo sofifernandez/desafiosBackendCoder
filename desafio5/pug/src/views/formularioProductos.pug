@@ -1,0 +1,18 @@
+div.row.justify-content-center.mx-auto.mb-5
+    h2.text-center Ingrese los datos del producto
+    form(action="/productos" method="POST").formulario.col-10.col-md-6.mx-auto 
+        div
+            label(for="titulo").font-weight-bold.col-6 Nombre
+            input(name="title" type="text").col-10#titulo
+        div
+            label(for="precio").font-weight-bold.col-6 Precio
+            input(name="price" type="number").col-10#precio
+        div
+            label(for="foto").font-weight-bold.col-6 Foto URL
+            input(name="thumbnail" type="text").col-10#foto
+
+        button(type="submit").my-3.boton Enviar
+
+  
+
+

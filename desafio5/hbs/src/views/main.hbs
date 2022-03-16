@@ -1,0 +1,15 @@
+<div class="row container mx-auto justify-content-center ">
+    {{#if cargarForm}}
+        {{> formularioProductos}}
+        {{else}}
+       <div class="text-center col-12 my-5 "> <a href="/productos" >Cargar productos</a></div>
+    {{/if}}
+    
+    
+    {{#if existencias}}
+        {{> listaProductos}}
+        {{else}}
+        <div class="text-center col-12 ">No existen productos</div>
+    {{/if}}
+    
+</div>

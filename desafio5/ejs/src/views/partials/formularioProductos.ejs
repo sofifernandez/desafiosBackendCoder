@@ -1,0 +1,22 @@
+<div class="row justify-content-center mx-auto mb-5">
+    <h2 class="text-center">Ingrese los datos del producto</h2>
+    <form class="formulario col-10 col-md-6 mx-auto" action="/productos" method="POST">
+        <div>
+            <label class="font-weight-bold col-6" for="titulo"><b>Nombre</b></label>
+            <input class="col-10" type="text" id="titulo" name="title">
+        </div>
+
+        <div>
+            <label class="font-weight-bold col-6" for="precio"><b>Precio</b></label>
+            <input class="col-10" type="number" id="precio" name="price">
+        </div>
+
+        <div>
+            <label class="font-weight-bold col-6" for="foto"><b>Foto URL</b></label>
+            <input class="col-10" type="text" id="foto" name="thumbnail">
+        </div>
+
+        <button class="my-3 boton" type="submit">Enviar</button>
+
+    </form>
+</div>

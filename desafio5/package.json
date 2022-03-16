@@ -1,0 +1,24 @@
+{
+  "name": "desafio5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hbs": "nodemon --inspect ./hbs/src/server.js",
+    "pug": "nodemon --inspect ./pug/src/server.js",
+    "ejs": "nodemon --inspect ./ejs/src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.11.0"
+  }
+}

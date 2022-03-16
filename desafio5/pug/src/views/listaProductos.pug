@@ -1,0 +1,11 @@
+div.row.col-12.justify-content-center.mx-auto
+    h2.text-center.mb-3.col-12 Productos existentes
+    each producto in productos
+        div.prodCard.row.col-11.col-sm-10.col-md-5.justify-content-center.mb-5.mx-1
+            img(src=producto.thumbnail).col-8
+            div.col-8.justify-content-center
+                div.text-center= producto.title
+                div.text-center= producto.price
+        
+    
+   
