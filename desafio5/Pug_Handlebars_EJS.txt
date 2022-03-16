@@ -1,0 +1,5 @@
+Handlebars: parece tener una comunidad de usuarios más grande y por lo tanto podría ser más fácil obtener ayuda. Sin embargo, su configuración es un poco rebuscada.
+Pug: su configuración es simple pero su sintaxis no es de mi agrado. El tema de las indentaciones y la forma de escribir clases, ID y atributos no me parece cómodo a priori.
+EJS: la configuración es simple pero la sintaxis me pareció rebuscada.
+
+Creo que utilizaría Handlebars, aunque tengo poco conocimiento sobre su uso, su potencial parece ser mayor. A su vez, la gran comunidad de usuarios que la acompaña es un plus. 
