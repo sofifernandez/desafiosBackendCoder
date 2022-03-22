@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <script  src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+  {{!--
+  {{{body}}} is used as a placeholder for where the main content should be rendered.
+  --}}
+  {{{body}}}
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+    <script > const socket = io();
+      
+      socket.on('sendProducts',  (data1, data2) => {
+        console.log('Entre a sendProducts')
+        console.log('data1: ', data1)
+        console.log('data2: ', data2)
+        const productos = data1;
+        let html = '';
+        const detalle = document.getElementById('divProductos')
+        if (detalle != null) {
+            productos.map(p =>
+                html += `
+                <div class="prodCard row col-11 col-sm-10 col-md-5 justify-content-center mb-5 mx-1">
+                    <img class="col-8" src=${p.thumbnail} alt="">
+                     <div class="col-8 justify-content-center">
+                        <div class="text-center">${p.title}</div>
+                        <div class="text-center">${ p.price }</div>
+                    </div>
+                </div>
+            `
+            );
+            detalle.innerHTML = html;
+        } else {
+          console.log('no')
+        }
+    });
+
+    {{!-- 
+    socket.on('mensajeConexion',(data)=>{ //callback que recibe data (el mensaje que está en server.js)
+      console.log(data)
+      alert(data)
+      socket.emit('mensajeRespuesta','Muchas gracias!') //=> responde eso (se manda al back -->server.js)
+    }) 
+    --}}
+
+    function addProd() {
+     const titulo = document.getElementById('titulo').value
+      const precio = document.getElementById('precio').value
+      socket.emit('messageFront',{
+        titulo,
+        precio,       
+     })
+}
+
+    </script>
+
+</body>
+
+</html>
