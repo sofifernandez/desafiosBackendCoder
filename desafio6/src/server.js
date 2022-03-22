@@ -73,9 +73,10 @@ async function get() {
   const productos = await contenedor.getAll();
   return(productos)
 }
-
+socket.emit('sendProducts', get(), 'HolaHola')
+  // Esto no funciona tampoco
   //io.sockets.emit("sendProducts",  new Producto('src/productos.json').getAll(), 'HolaHola' )
-  socket.emit('sendProducts', get(), 'HolaHola')
+  
 });
 
 
