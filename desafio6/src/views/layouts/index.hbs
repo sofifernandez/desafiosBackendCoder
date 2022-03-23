@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css" />
-  <script  src="/socket.io/socket.io.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
 </head>
 
 <body>
@@ -29,51 +29,83 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
-    <script > const socket = io();
-      
-      socket.on('sendProducts',  (data1, data2) => {
-        console.log('Entre a sendProducts')
-        console.log('data1: ', data1)
-        console.log('data2: ', data2)
-        const productos = data1;
-        let html = '';
-        const detalle = document.getElementById('divProductos')
-        if (detalle != null) {
-            productos.map(p =>
-                html += `
+  <script> const socket = io();
+
+    // Renderizar productos que envía el Back
+    socket.on('sendProducts', (data) => {
+      const productos = data;
+      let html = '';
+      const detalle = document.getElementById('divProductos')
+      if (detalle != null) {
+        productos.map(p =>
+          html += `
                 <div class="prodCard row col-11 col-sm-10 col-md-5 justify-content-center mb-5 mx-1">
                     <img class="col-8" src=${p.thumbnail} alt="">
                      <div class="col-8 justify-content-center">
                         <div class="text-center">${p.title}</div>
-                        <div class="text-center">${ p.price }</div>
+                        <div class="text-center">$${p.price}</div>
                     </div>
                 </div>
             `
-            );
-            detalle.innerHTML = html;
-        } else {
-          console.log('no')
-        }
+        );
+        detalle.innerHTML = html;
+      } else {
+        console.log('no')
+      }
     });
 
-    {{!-- 
-    socket.on('mensajeConexion',(data)=>{ //callback que recibe data (el mensaje que está en server.js)
-      console.log(data)
-      alert(data)
-      socket.emit('mensajeRespuesta','Muchas gracias!') //=> responde eso (se manda al back -->server.js)
-    }) 
-    --}}
-
+    // Funcion del formulario, se envía la info al Back
     function addProd() {
-     const titulo = document.getElementById('titulo').value
-      const precio = document.getElementById('precio').value
-      socket.emit('messageFront',{
-        titulo,
-        precio,       
-     })
-}
+      const title = document.getElementById('titulo').value
+      const price = document.getElementById('precio').value
+      const thumbnail = document.getElementById('foto').value
+      socket.emit('addProducts', {
+        title,
+        price,
+        thumbnail
+      })
+    }
 
-    </script>
+    
+    //CHAT MANAGER-----------------------------------------------------------------
+    //Obtener mensajes del chat guardados
+    socket.on('sendMessages', (data) => {
+      const mensajes = data;
+      let innerText = ''
+      mensajes.map((mensaje) => { //=> para pintarlo en la página. Data es un arreglo y se mapea
+        innerText += `  
+        <div class="col-12 row justify-content-center mb-3">
+             <div class="col-8 col-md-4 text-center">${mensaje.author}</div>
+             <div class="col-8 col-md-4 text-center">${mensaje.date}</div>
+             <div class="col-8 col-md-4 text-center">${mensaje.text}</div>
+         </div>
+        `
+      })
+      document.getElementById('prevMessages').innerHTML = innerText // con esto se agrega
+    })
+
+    
+    //Función del chat, se envía info al Back
+    function addMessage() {
+        const author = document.getElementById('mailAuthor').value
+        const text = document.getElementById('message').value
+        const d = new Date();
+        const year= d.getFullYear().toLocaleString()
+        const month =d.getMonth().toLocaleString()
+        const day=d.getDate().toLocaleString()
+        const hours= d.getHours().toLocaleString()
+        const minutes= d.getMinutes().toLocaleString()
+        const sec= d.getSeconds().toLocaleString()
+        const date= day+'/'+month+'/'+year + ' ' +hours+':'+minutes+':'+sec
+        socket.emit('sendNewChat', {
+          author,
+          date,
+          text
+        })
+        document.getElementById('message').value = '' // al enviar, se borra el mensaje pero queda el nombre en el form
+      }
+
+  </script>
 
 </body>
 

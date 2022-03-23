@@ -1,18 +1,15 @@
 const fs = require('fs');
-//const express = require('express');
-//const routerProd = express.Router();
 
 class Producto {
     constructor(file) {
         this.file = file;
     }
 
-    // LEER EL ARCHIVO Y DEJARLO COMO JSON
+    // LEER EL ARCHIVO
     async getAll() {
         try {
             const data = await fs.promises.readFile(this.file, 'utf-8')
             const dataProducts = JSON.parse(data);
-            console.log(dataProducts)
             return dataProducts;
         } catch (err) {
             console.log(err, 'Ooops, there are no products');
@@ -35,6 +32,7 @@ class Producto {
                 const newProd = { title, price, thumbnail, id: maxID + 1 }
                 const newData = [...dataProducts, newProd]
                 fs.promises.writeFile(this.file, JSON.stringify(newData))
+                console.log('Producto guardado')
                 return newProd.id
             }
         } catch (err) {

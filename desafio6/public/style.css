@@ -27,3 +27,9 @@ input {
   background-color: bisque;
   box-shadow: 2px 2px black;
 }
+
+/*------------------------------------------ CHAT-------------------------------------------------------------- */
+.divChat {
+  background-color: rgb(162, 172, 168);
+  border-radius: 1rem;
+}

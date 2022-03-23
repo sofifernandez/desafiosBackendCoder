@@ -1,6 +1,7 @@
 //ASI FUNCIONA:
 const express = require('express');
-const { engine } = require("express-handlebars"); 
+const fs = require("fs");
+const { engine } = require("express-handlebars");
 const app = express();
 const http = require("http");
 const server = http.createServer(app);
@@ -11,7 +12,6 @@ const io = new Server(server)
 
 
 //Configuracion servidor Express y Handlebar----------------------------------------------------------------------
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("./public"));
@@ -22,36 +22,19 @@ app.engine(
   "hbs",
   engine({
     extname: ".hbs",
-    defaultLayout: "index.hbs", 
-    layoutsDir: __dirname + "/views/layouts", 
+    defaultLayout: "index.hbs",
+    layoutsDir: __dirname + "/views/layouts",
     partialsDir: __dirname + "/views/partials",
   }),
 );
 
 // RUTAS Y FUNCIONES---------------------------------------------------------------------------------------------
-app.get("/",  (req, res) => {
-  // const contenedor = new Producto('./src/productos.json');
-  // const productos = await contenedor.getAll();
-  // const existencias = productos.length > 0
+app.get("/", async (req, res) => {
   res.render("main", {
-    //productos,
-    // existencias: existencias,
   });
 });
 
-// app.post('/', async(req, res) => {
-//   const {title, price, thumbnail} =req.body
-//   const contenedor = new Producto('./src/productos.json');
-//   const newID= await contenedor.save(title, price, thumbnail) 
-//   if (newID) {
-//     res.status(200).send(`New producto with ID=${newID} was added to the list`)
-//   } else {
-//     res.status(400).json({ "InternalError": 'Product Not Added.'})
-//   }
-//   res.redirect('/')
-  
-// })
-
+// PARA PROBAR AGREGAR:
 // const productos = [
 //   {
 //     "title": "Pizarra",
@@ -61,28 +44,35 @@ app.get("/",  (req, res) => {
 //     }
 //   ]
 
+
 // WEBSOCKETS-----------------------------------------------------------------------------------------------------
-io.on("connection", (socket) => {
+const contenedor = new Producto('./src/productos.json');
+
+io.on("connection", async (socket) => {
   console.log("💻 Nuevo usuario conectado!");
-  socket.on("disconnect", () => {  
+  socket.on("disconnect", () => {
     console.log("❌ Usuario desconectado");
   });
 
-async function get() { 
-  const contenedor =  new Producto('./src/productos.json');
-  const productos = await contenedor.getAll();
-  return(productos)
-}
-socket.emit('sendProducts', get(), 'HolaHola')
-  // Esto no funciona tampoco
-  //io.sockets.emit("sendProducts",  new Producto('src/productos.json').getAll(), 'HolaHola' )
-  
+  //Enviar productos al Front
+  socket.emit('sendProducts', await contenedor.getAll())
+  // Nuevos productos desde el Front
+  socket.on("addProducts", async (data) => {
+    const { title, price, thumbnail } = data
+    new Producto('./src/productos.json').saveProduct(title, price, thumbnail)
+    io.sockets.emit("sendProducts", await contenedor.getAll())
+  });
+
+  //CHAT MANAGER-------------------------------------------------------------------
+  const messages = JSON.parse(fs.readFileSync('./src/chatmessages.json', 'utf-8'));
+  socket.emit("sendMessages", messages); //enviar chats guardados al Front
+  socket.on("sendNewChat", (data) => {
+     messages.push(data);
+    fs.writeFileSync('./src/chatmessages.json', JSON.stringify(messages), 'utf-8');
+    io.sockets.emit("sendMessages", messages); //==> devuelve a todos los usuarios conectados 
+  });
+
 });
-
-
-
-
-
 
 
 const PORT = 8080;

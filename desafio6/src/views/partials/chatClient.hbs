@@ -1,0 +1,19 @@
+<div class="row col-12 justify-content-center mb-5">
+    <h2 class="text-center col-12">Centro de mensajes</h2>
+    <div class="row col-12 justify-content-center pt-3 divChat">
+        <form onSubmit="addMessage();return false">
+            <div class="row col-12 justify-content-start mb-3">
+                <input type="mail" name="mail" id="mailAuthor" placeholder="e-mail">
+            </div>
+            <div class="row justify-content-around">
+                <div class="col-12"><label for="message">Mensaje</label></div>
+                <input class="col-8" type="text" name="message" id="message" placeholder="Be nice">
+                <button class="col-3 btn btn-success" id="send" type="submit">Enviar</button>
+            </div>
+        </form>
+        <div id="prevMessages" class="col-12 mt-3">
+         </div>
+    </div>
+
+
+</div>
