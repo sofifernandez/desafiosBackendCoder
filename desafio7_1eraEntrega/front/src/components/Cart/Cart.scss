@@ -1,0 +1,53 @@
+.btnSeguirComprando {
+  padding: 0.4rem;
+  background-color: cadetblue;
+  border: black 2px solid;
+  border-radius: 0.1rem;
+  font-weight: 700;
+  font-size: 1rem;
+  a {
+    color: black;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.btnVaciar {
+  padding: 0.4rem;
+  background-color: #b6765d;
+  font-weight: 700;
+  font-size: 1rem;
+  border: black 2px solid;
+  border-radius: 0.1rem;
+  color: black;
+  &:hover {
+    color: white;
+  }
+}
+
+.cart-summary {
+  background-color: #e9ccbc;
+  border: 1px solid black;
+  box-shadow: 5px 5px #888888;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      color: #302e2e;
+      font-size: 1rem;
+    }
+  }
+}
+
+.btnCheckout {
+  background-color: #7b94b3;
+  border: 2px solid black;
+  border-radius: 1rem;
+
+  &:hover {
+    color: white;
+  }
+}

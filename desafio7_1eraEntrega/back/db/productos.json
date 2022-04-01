@@ -1,0 +1,82 @@
+[
+    {
+        "id": "A1",
+        "nombre": "Quarter",
+        "tipo": "anillos",
+        "precio": 1700,
+        "imagen": "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/anillos/quarter.png",
+        "stock": 12,
+        "quantity": 0,
+        "total": null
+    },
+    {
+        "id": "A2",
+        "nombre": "Patrón y Patrona",
+        "tipo": "anillos",
+        "precio": 2100,
+        "imagen": "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/anillos/patron_a.png",
+        "stock": 13,
+        "quantity": 0,
+        "total": null
+    },
+    {
+        "id": "A3",
+        "nombre": "Mold",
+        "tipo": "anillos",
+        "precio": 1700,
+        "imagen": "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/anillos/mold2.png",
+        "stock": 4,
+        "quantity": 0,
+        "total": null
+    },
+    {
+        "id": "A4",
+        "nombre": "Drop, Egg & Line",
+        "tipo": "anillos",
+        "precio": 1700,
+        "imagen": "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/anillos/dropEggLine.png",
+        "stock": 13,
+        "quantity": 0,
+        "total": null
+    },
+    {
+        "id": "A5",
+        "nombre": "Line",
+        "tipo": "aros",
+        "precio": 1700,
+        "imagen": "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/aros/line.png",
+        "stock": 12,
+        "quantity": 0,
+        "total": null
+    },
+    {
+        "id": "A6",
+        "nombre": "Quarter",
+        "tipo": "aros",
+        "precio": 1900,
+        "imagen": "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/aros/quarter.png",
+        "stock": 5,
+        "quantity": 0,
+        "total": null
+    },
+    {
+        "id": "A7",
+        "nombre": "Quarter Long",
+        "tipo": "aros",
+        "precio": 2100,
+        "imagen": "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/aros/quarter_long.png",
+        "stock": 3,
+        "quantity": 0,
+        "total": null
+    },
+    {
+        "id": "A8",
+        "nombre": "Solid",
+        "tipo": "aros",
+        "precio": 2000,
+        "imagen": "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/aros/solid.png",
+        "stock": 14,
+        "quantity": 0,
+        "total": null
+    }
+]

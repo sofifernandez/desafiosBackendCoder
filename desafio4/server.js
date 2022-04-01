@@ -28,7 +28,7 @@ app.use("/api/routerNewProd", routerNewProd);
 
 //GET --> todos los productos en la dirección http://localhost:8080/api/productos
 routerProductos.get('/', async (req, res) => {
-  const contenedor = new Contenedor('productos.json');
+  const contenedor = new Contenedor('db/productos.json');
   const productos = await contenedor.getAll();
   res.status(200).send(productos);
 })
@@ -36,7 +36,7 @@ routerProductos.get('/', async (req, res) => {
 //GET PARAMS --> de un producto con determinado ID. Ej: http://localhost:8080/api/productos/1
 routerProductos.get("/:id", async (req, res) => {
   const id = parseInt(req.params.id)
-  const contenedor = new Contenedor('productos.json');
+  const contenedor = new Contenedor('db/productos.json');
   const producto = await contenedor.getById(id)
   if (!producto) {
      res.status(400).json({ "InternalError": 'Product Not Found.' })

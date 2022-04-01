@@ -1,0 +1,86 @@
+/*---------------------------HEADERS---------------------------------*/
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  div {
+    width: max-content;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+#headerHOME {
+  background-color: #e5e5e5;
+  margin-top: inherit;
+}
+
+/*------------Menú de pantallas medianas y grandes-----------------*/
+#menuPrincipal {
+  text-align: center;
+  height: min-content;
+  align-self: center;
+  width: 100%;
+  ul {
+    background-color: #e5e5e5;
+    list-style-type: none;
+    font-weight: 800;
+    font-size: 1.7rem;
+    width: 100%;
+    li {
+      text-align: center;
+      align-self: center;
+      a {
+        color: black;
+      }
+      a:hover {
+        color: white;
+        background-color: black;
+        border-radius: 0.4rem;
+        transition: 300ms linear;
+      }
+      #btnCarritoNav:hover {
+        color: #7b94b3;
+        background-color: inherit;
+        transition: 100ms linear;
+      }
+    }
+  }
+}
+
+.seccion-activa-md {
+  background-color: #e9ccbc;
+  border-radius: 0.4rem;
+}
+
+/*---------Menú de pantallas chicas------------*/
+a.dropdown-item.seccion-activa {
+  color: #dcabae;
+}
+
+.dropdown {
+  margin-bottom: 0;
+}
+
+.dropdown-menu.show {
+  background-color: #404040;
+  color: white;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+#lblCartCountDrop {
+  font-size: 1rem;
+  background: #dcabae;
+  color: #1f1e1e;
+  vertical-align: top;
+  display: none;
+}
+
+#dropdownMenuButton2 {
+  background-color: #e9ccbc;
+  border: none;
+}
