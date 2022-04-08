@@ -18,4 +18,8 @@
 
 # Challenge 7
 
-- First version of final project
+- First version of final project. EXPRESS Server + REACT
+
+# Challenge 8
+
+- EXPRESS Server + REACT + MariaDB + SQLite3
