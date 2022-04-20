@@ -30,4 +30,4 @@
 
 # Challenge 10
 
-- Second version of final project. Mongoose, Express, React.
+- Second version of final project. Mongoose + Express + React.
