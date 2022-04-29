@@ -74,6 +74,7 @@ export const ProductForm = () => {
                     </div>
                 </form>
             </div>
+            
             <div className="container my-auto row justify-content-center">
                 <Chat/>
             </div>

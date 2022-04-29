@@ -2,20 +2,19 @@ import mongoose from "mongoose";
 
 const Schema = new mongoose.Schema({
   author: {
-    type: String,
+    type: Object,
     required: true,
-    max: 100,
   },
   text: {
     type: String,
     required: true,
-    max: 100,
   },
   created_at: {
     type: String,
-    default: null,
+    default:  new Date().toLocaleString(),
     required:true,
   }
 });
+
 
 export const ChatModel = mongoose.model("Chat", Schema);

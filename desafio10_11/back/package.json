@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "server": "nodemon --inspect server.js"
+    "server": "nodemon --inspect server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,9 +15,15 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "faker": "^6.6.6",
     "gitignore": "^0.7.0",
     "mongoose": "^6.3.0",
     "nodemon": "^2.0.15",
-    "socket.io": "^4.4.1"
+    "normalizr": "^3.6.2",
+    "socket.io": "^4.4.1",
+    "uniqid": "^5.4.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.2.0"
   }
 }

@@ -4,7 +4,8 @@ import axios from 'axios'
 
 export const ItemListContainer = () => {
 
-  const URI = 'http://localhost:8080/api/productos'
+  //const URI = 'http://localhost:8080/api/productos'
+  const URI = 'http://localhost:8080/api/productos-test'
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {

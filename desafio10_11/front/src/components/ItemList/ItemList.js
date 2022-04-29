@@ -23,6 +23,7 @@ export const ItemList = ({ product }) => {
         <p className="card-text precioProducto">
           <b>${product.precio}</b>
         </p>
+        <p> <b>{product.tipo}</b></p>
           {/* <StockHandler item={product} onHandleStock={onAddHandle}></StockHandler> */}
       </div>
       <ItemCount inicial={0} stock={product.stock} ID={product._id} onAdd={onAddHandle} />
