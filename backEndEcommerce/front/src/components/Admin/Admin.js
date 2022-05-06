@@ -6,7 +6,7 @@ import { ProductForm } from "../ProductForm/ProductForm";
 
 export const Admin = () => {
     const [logIn, setLogIn] = useState();
-    const [response, setResponse] = useState()
+    
 
     const URI = 'http://localhost:8080/api/admin'
 
@@ -63,9 +63,9 @@ export const Admin = () => {
                         <button type='submit' className='mt-1 col-5 btnCheckout mb-3 fs-4' onClick={onHandleSubmit}>Log in</button>
                     </div>
                 </form>
-                {response ? <div>
+
                     <ProductForm />
-                </div> : null}
+
             </div>
         )
     }
