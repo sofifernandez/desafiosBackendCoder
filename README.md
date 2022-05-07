@@ -31,3 +31,11 @@
 # Challenge 10
 
 - Second version of final project. Mongoose + Express + React.
+
+# Challenge 11
+
+- Use of faker and normalizr
+
+# Challenge 12
+
+- Cookies and session.

@@ -27,17 +27,17 @@ export const ProductForm = () => {
     // Submitir nuevo producto
     const onHandleSubmit = async (e) => {
         e.preventDefault()
-        await axios.post(URI, productData)
+        await axios.post(URI, productData).then((response)=>console.log(response))
     }
 
     const onHandleUpdate = async (e) => {
         e.preventDefault()
-        await axios.put(URI + `/${prodId}`, productData)
+        await axios.put(URI + `/${prodId}`, productData).then((response)=>console.log(response))
     }
 
     const onHandleDelete = async (e) => {
         e.preventDefault()
-        await axios.delete(URI + `/${prodId}`)
+        await axios.delete(URI + `/${prodId}`).then((response)=>console.log(response))
     }
 
     const inputs = [
@@ -51,6 +51,7 @@ export const ProductForm = () => {
 
     return (
         <div className="row container-fluid justify-content-center mt-5 mx-0">
+            <div className="text-center"><h2>Bienvenido CoderHouse!</h2></div>
             <div className='cart-summary col-8 col-md-5 my-auto pt-3'>
                 <form className="row justify-content-center" name='formMensaje' id='formMensaje'>
                     <div className="col-11 mb-2 row justify-content-center">

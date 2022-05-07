@@ -9,17 +9,27 @@ const routerAdmin = express.Router();
 //-------- ADMIN ------------------------------------------------------------------------------------------
 
 // LOG IN
-routerAdmin.get("/login", async (req, res) => {
-    console.log(req)
-    const { userName, password } = req.query;
+routerAdmin.post("/", async (req, res) => {
+    console.log(req.body)
+    const { userName, password } = req.body;
      if (userName === "coderhouse" && password === "123456") { //localhost:8080/api/admin/login?userName=coderhouse&password=123456
         req.session.login = true; //--> si entra, el login se vuelve TRUE y en el middleware está que si tengo eso true, me puede ingresar a /restingida
-        res.send('SI');
+        res.send(true);
     } else {
-        res.send('NO');
+        res.send(false);
     }
 });
 
+/// LOG OUT
+routerAdmin.get("/logout", (req, res) => {
+  req.session.destroy((err) => { 
+    if (!err) {
+      res.status(200).send(false); // si no hay error
+    } else {
+      res.send(true);
+    }
+  });
+});
 
 
 //-->PRUEBA: ESTO FUNCIONA, SI NO ESTOY LOGGEADO NO ENTRA
