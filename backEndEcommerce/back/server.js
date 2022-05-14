@@ -7,6 +7,7 @@ import { Server } from 'socket.io'
 import mongoStore from "connect-mongo";
 import session from "express-session";
 import cookieParser from "cookie-parser";
+import passport from "./utils/passport.utils.js";
 
 dotenv.config();
 
@@ -18,10 +19,14 @@ import routerAdmin from "./routes/admin.routes.js"
 
 const app = express();
 const server = http.createServer(app);
-app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cookieParser());
+app.use(cors({ credentials: true, origin: true }))
+//Uso de rutas-------------------------------------//
+app.use('/api/productos', routerProd)
+app.use('/api/carrito', routerCart)
+app.use('/api/admin', routerAdmin)
 // app.use(cors({
 //   origin: ['http://localhost:3000'],
 //   methods: ['POST', 'PUT', 'GET'],
@@ -40,40 +45,52 @@ app.use(cors());
 const io = new Server(server, {
   cors: {
     origin: "http://localhost:3000",
-    methods: ["GET", "POST", "PUT"],
+    methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],
     credentials: true
   }
 })
 
-app.use(
-  session({
-    store: mongoStore.create({
-      mongoUrl: process.env.MONGO_URI, // MONGO_URI= EL LOCALHOST DE SIEMPRE
+//http://127.0.0.1:3000
+
+// const io = new Server(server, {
+//    cors: { origin: 'http://localhost:3000'}
+// });
+
+// app.use(cors({
+//    origin: 'http://localhost:3000',
+//    methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD'],
+//    credentials: true,
+// }));
+
+
+app.use(session({
+   store: mongoStore.create({
+      mongoUrl: process.env.MONGO_URI,
       options: {
-        userNewUrlParser: true,
-        useUnifiedTopology: true,
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
       },
-    }),
-    secret: process.env.SECRET, 
-    resave: true, 
-    saveUninitialized: true,
-    cookie: { maxAge: 100000 },
-    //rolling:true  //Reset the cookie Max-Age on every request
-  }),
-);
+   }),    
+   secret: process.env.SECRET,
+   resave: true,
+   saveUninitialized: true,
+  //  cookie: {
+  //     httpOnly: true,
+  //     maxAge: Number(process.env.EXPIRE),
+  //     sameSite: false
+  //  },
+  //  rolling: true //Reset the cookie Max-Age on every request
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 //****************************************************************************/
 //DESCOMENTAR PARA SUBIR LOS PRODUCTOS Y CHATS A LA BASE DE DATOS ECOMMERCE de Mongo
 // import createDocs from './db/createDocs.js'
 // createDocs();
 //****************************************************************************/
-
-
-//Uso de rutas-------------------------------------//
-app.use('/api/productos', routerProd)
-app.use('/api/carrito', routerCart)
-app.use('/api/admin', routerAdmin)
 
 
 //**********CHAT MANAGER***********************************************************************************************

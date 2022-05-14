@@ -1,6 +1,12 @@
 import express from 'express';
 import Product from '../controllers/product.controller.js';
-import autorization from "../middleware/auth.middleware.js";
+import * as AuthController from "../controllers/auth.controller.js";
+import passport from "../utils/passport.utils.js";
+import { UserModel } from "../models/user.model.js";
+//import bcrypt from "bcrypt";
+import passportPrueba from "../utils/passport.prueba.js";
+
+
 const p = new Product();
 const routerAdmin = express.Router();
 
@@ -8,69 +14,58 @@ const routerAdmin = express.Router();
 //*********************************************************************************************************
 //-------- ADMIN ------------------------------------------------------------------------------------------
 
-// LOG IN
-routerAdmin.post("/", async (req, res) => {
-    console.log(req.body)
-    const { userName, password } = req.body;
-     if (userName === "coderhouse" && password === "123456") { //localhost:8080/api/admin/login?userName=coderhouse&password=123456
-        req.session.login = true; //--> si entra, el login se vuelve TRUE y en el middleware está que si tengo eso true, me puede ingresar a /restingida
-        res.send(true);
-    } else {
-        res.send(false);
-    }
+// LOG IN-----------------------------------------------
+routerAdmin.post("/login", () => {
+  console.log('ENTRA')
+  passport.authenticate("login", { failureRedirect: "/api/admin/failLogin" }),
+    AuthController.postLogin
+    
 });
+routerAdmin.get("/failLogin", AuthController.failLogin);
 
-/// LOG OUT
-routerAdmin.get("/logout", (req, res) => {
-  req.session.destroy((err) => { 
-    if (!err) {
-      res.status(200).send(false); // si no hay error
-    } else {
-      res.send(true);
+///SIGNUP----------------------------------------------
+// routerAdmin.post("/signup",
+//   passport.authenticate("signup", { failureRedirect: "/api/admin/failSignup" }),
+//   AuthController.postSignup
+// );
+// routerAdmin.get("/failSignup", AuthController.failSignup);
+
+
+
+routerAdmin.post("/signup", (req, res) => {
+  console.log('---------------------------------------------------------------------', req.body)
+  UserModel.findOne({ username: req.body.username }, async (err, doc) => {
+    if (err) throw err;
+    if (doc) res.send("User Already Exists");
+    if (!doc) {
+      //const hashedPassword = await bcrypt.hash(req.body.password, 10);
+
+      const newUser = new UserModel({
+        username: req.body.username,
+        password: req.body.password,
+      });
+      console.log(newUser)
+      await newUser.save();
+      res.send("User Created");
     }
   });
 });
 
 
-//-->PRUEBA: ESTO FUNCIONA, SI NO ESTOY LOGGEADO NO ENTRA
-routerAdmin.get('/prueba', autorization, (req, res) => { //http://localhost:8080/api/admin/prueba
-       res.send('Autorizado'); 
+//GET USER
+routerAdmin.get('/user', (req, res) => {
+  res.send(req.user)
+})
 
-});
+/// LOGOUT -----------------------------------------------------
+routerAdmin.get('/logout', (req, res) => {
+  req.logout();
+  res.redirect('/')
+})
 
-//-->AGREGAR productos al listado
-routerAdmin.post('/productos', autorization, (req, res) => {
-    const { nombre, tipo, precio, imagen, stock } = req.body;
-    const newProd = {
-        nombre,
-        tipo,
-        precio,
-        imagen,
-        stock,
-    }
-    const msg = p.saveProduct(newProd)
-    res.status(200).json(msg);
+routerAdmin.get("/logout", AuthController.logout);
 
-});
 
-//-->ACTUALIZAR un producto por su id 
-routerAdmin.put('/productos/:id', autorization, (req, res) => { //localhost:8080/api/admin/productos/627538fe498e9db6791b15eb
-    const IDupdate = req.params.id;
-    const itemUpdate = req.body;
-    res.send(p.updateById(IDupdate, itemUpdate))
 
-});
-
-//BORRAR un producto por su id 
-routerAdmin.delete('/productos/:id', autorization, (req, res) => {
-    try {
-        const itemId = req.params.id;
-        res.send(p.deleteById(itemId))
-    }
-    catch (err) {
-        res.status(400).json({ error: err });
-    }
-
-});
 
 export default routerAdmin;

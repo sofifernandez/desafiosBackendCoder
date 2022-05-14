@@ -1,7 +1,10 @@
-export default function auth(req, res, next) {
-  if (req.session.login) {
-    next(); //-> sigue a lo proximo
-  } else {
-    return res.status(401).send("No autorizado");
-  }
+const authorized = (req, res, next) => {
+    if (req.isAuthenticated()) {
+        req.session.touch()
+        next();
+    } else {
+        return res.status(401).send('No Autorizado');
+    }
 }
+
+export default authorized;
