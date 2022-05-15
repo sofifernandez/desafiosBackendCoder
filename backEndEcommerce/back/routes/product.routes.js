@@ -1,6 +1,6 @@
 import express  from 'express';
 import Product from '../controllers/product.controller.js';
-import autorization from "../middleware/auth.middleware.js";
+import {verifyToken} from '../middleware/auth.middleware.js'
 const p = new Product();
 const routerProd = express.Router();
 
@@ -26,8 +26,8 @@ routerProd.get("/:id", async (req, res) => {
 
 
 //-->AGREGAR productos al listado
-routerProd.post('/', autorization, (req, res) => {
-    const { nombre, tipo, precio, imagen, stock } = req.body;
+routerProd.post('/', verifyToken, (req, res) => {
+    const { nombre, tipo, precio, imagen, stock } = req.body.productData;
     const newProd = {
         nombre,
         tipo,
@@ -38,18 +38,19 @@ routerProd.post('/', autorization, (req, res) => {
     const msg = p.saveProduct(newProd)
     res.status(200).json(msg);
 
+
 });
 
 //-->ACTUALIZAR un producto por su id 
-routerProd.put('/:id', autorization, (req, res) => { //localhost:8080/api/admin/productos/627538fe498e9db6791b15eb
-    const IDupdate = req.params.id;
-    const itemUpdate = req.body;
-    res.send(p.updateById(IDupdate, itemUpdate))
+routerProd.put('/:id', verifyToken, (req, res) => { //localhost:8080/api/admin/productos/627538fe498e9db6791b15eb
+  const IDupdate = req.params.id;
+  const itemUpdate = req.body.productData;
+  res.send(p.updateById(IDupdate, itemUpdate))
 
 });
 
 //BORRAR un producto por su id 
-routerProd.delete('/:id', autorization, (req, res) => {
+routerProd.delete('/:id', verifyToken, (req, res) => {
     try {
         const itemId = req.params.id;
         res.send(p.deleteById(itemId))

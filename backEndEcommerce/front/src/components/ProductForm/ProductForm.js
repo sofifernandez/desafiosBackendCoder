@@ -1,19 +1,13 @@
 import { useState } from "react";
-import axios from 'axios'
 import './ProductForm.scss'
 import { Chat } from '../Chat/Chat'
 
 
 export const ProductForm = () => {
 
-    const URI = 'http://localhost:8080/api/admin'
+    const URI = 'http://localhost:8080/api/productos'
     const [productData, setProductData] = useState()
     const [prodId, setProdId] = useState('');
-
-    // const instance = axios.create({
-    //     withCredentials: false
-    // })
-
 
 
     //Manejar el estado
@@ -27,17 +21,59 @@ export const ProductForm = () => {
     // Submitir nuevo producto
     const onHandleSubmit = async (e) => {
         e.preventDefault()
-        await axios.post(URI, productData).then((response)=>console.log(response))
+        const res = await fetch(URI, {
+            withCredntials: true,
+            credentials: 'include',
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({productData})
+        }).then(res => res.json())
+        if (res.status === 401) {
+            console.log('ERROR 401')
+        } else {
+            console.log('Producto agregado')
+        }
     }
 
     const onHandleUpdate = async (e) => {
         e.preventDefault()
-        await axios.put(URI + `/${prodId}`, productData).then((response)=>console.log(response))
+        //await axios.put(URI + `/${prodId}`, productData).then((response)=>console.log(response))
+        console.log(URI + `/${prodId}`)
+        console.log(prodId)
+        const res = await fetch(URI  + `/${prodId}`, {
+            withCredntials: true,
+            credentials: 'include',
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({productData})
+        }).then(res => res.json())
+        if (res.status === 401) {
+            console.log('ERROR 401')
+        } else {
+            console.log(res)
+        }
     }
 
     const onHandleDelete = async (e) => {
         e.preventDefault()
-        await axios.delete(URI + `/${prodId}`).then((response)=>console.log(response))
+        //await axios.delete(URI + `/${prodId}`).then((response)=>console.log(response))
+        const res = await fetch(URI  + `/${prodId}`, {
+            withCredntials: true,
+            credentials: 'include',
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        }).then(res => res.json())
+        if (res.status === 401) {
+            console.log('ERROR 401')
+        } else {
+            console.log(res)
+        }
     }
 
     const inputs = [
@@ -51,7 +87,6 @@ export const ProductForm = () => {
 
     return (
         <div className="row container-fluid justify-content-center mt-5 mx-0">
-            <div className="text-center"><h2>Bienvenido CoderHouse!</h2></div>
             <div className='cart-summary col-8 col-md-5 my-auto pt-3'>
                 <form className="row justify-content-center" name='formMensaje' id='formMensaje'>
                     <div className="col-11 mb-2 row justify-content-center">

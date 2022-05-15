@@ -1,9 +1,9 @@
 import "../db/db.js";
 import { ProductModel } from "../models/product.model.js";
 
+
 class Product {
     constructor() {}
-
     // LEER EL ARCHIVO (CHECK)
     async getAll() {
         try {
@@ -14,7 +14,6 @@ class Product {
             return null
         }
     }
-
     // OBTENER PRODUCTO CON UN DETERMINADO ID (CHECK)
     async getById(id) {
         try {
@@ -36,7 +35,6 @@ class Product {
     //AGREGAR PRODUCTOS (CHECK)
     async saveProduct(producto) {
         try {
-            console.log('ENTRA')
             const newProd = await new ProductModel(producto);
             await newProd.save().then((res) => console.log(res)).catch((err) => console.log(err));
         } catch (err) {
@@ -58,7 +56,6 @@ class Product {
         }
     }
 }
-
 
 export default Product;
 

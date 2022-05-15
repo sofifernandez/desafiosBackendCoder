@@ -7,14 +7,14 @@ import { Server } from 'socket.io'
 import mongoStore from "connect-mongo";
 import session from "express-session";
 import cookieParser from "cookie-parser";
-import passport from "./utils/passport.utils.js";
+
 
 dotenv.config();
 
 // Rutas
 import routerProd from "./routes/product.routes.js";
 import routerCart from "./routes/cart.routes.js"
-import routerAdmin from "./routes/admin.routes.js"
+import userRouter from "./routes/user.routes.js"
 
 
 const app = express();
@@ -23,10 +23,32 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors({ credentials: true, origin: true }))
+app.use(session({
+   store: mongoStore.create({
+      mongoUrl: process.env.MONGO_URI,
+      options: {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+      },
+   }),    
+   secret: process.env.API_SECRET,
+   resave: true,
+   saveUninitialized: true,
+   cookie: {
+      httpOnly: true,
+      maxAge: 10 * 60 * 1000,
+      sameSite: false
+   },
+  //  rolling: true //Reset the cookie Max-Age on every request
+}));
+
+
 //Uso de rutas-------------------------------------//
 app.use('/api/productos', routerProd)
 app.use('/api/carrito', routerCart)
-app.use('/api/admin', routerAdmin)
+app.use('/api/user', userRouter)
+
+
 // app.use(cors({
 //   origin: ['http://localhost:3000'],
 //   methods: ['POST', 'PUT', 'GET'],
@@ -72,19 +94,17 @@ app.use(session({
             useUnifiedTopology: true,
       },
    }),    
-   secret: process.env.SECRET,
+   secret: process.env.API_SECRET,
    resave: true,
    saveUninitialized: true,
-  //  cookie: {
-  //     httpOnly: true,
-  //     maxAge: Number(process.env.EXPIRE),
-  //     sameSite: false
-  //  },
+   cookie: {
+      httpOnly: true,
+      maxAge: 10 * 60 * 1000,
+      sameSite: false
+   },
   //  rolling: true //Reset the cookie Max-Age on every request
 }));
 
-app.use(passport.initialize());
-app.use(passport.session());
 
 //****************************************************************************/
 //DESCOMENTAR PARA SUBIR LOS PRODUCTOS Y CHATS A LA BASE DE DATOS ECOMMERCE de Mongo
