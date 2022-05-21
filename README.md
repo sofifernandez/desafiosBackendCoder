@@ -39,3 +39,11 @@
 # Challenge 12
 
 - Cookies and session.
+
+# Challenge 13
+
+- Authentication and Authorization (with JWT)
+
+# Challenge 14
+
+- Fork and child process

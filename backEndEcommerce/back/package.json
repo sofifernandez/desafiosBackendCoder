@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon --inspect ./server.js"
+    "server": "nodemon --inspect ./server.js --port 8080"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +22,7 @@
     "express-session": "^1.17.2",
     "gitignore": "^0.7.0",
     "jsonwebtoken": "^8.5.1",
+    "minimist": "^1.2.6",
     "mongoose": "^6.3.0",
     "nodemon": "^2.0.15",
     "socket.io": "^4.4.1",
