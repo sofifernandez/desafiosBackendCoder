@@ -1,0 +1,2 @@
+127.0.0.1 - - [04/Jun/2022:19:36:20 -0300] "GET / HTTP/1.1" 502 497 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
+127.0.0.1 - - [04/Jun/2022:19:36:20 -0300] "GET /favicon.ico HTTP/1.1" 502 497 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"

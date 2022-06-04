@@ -7,6 +7,10 @@ import { Server } from 'socket.io'
 import mongoStore from "connect-mongo";
 import session from "express-session";
 import cookieParser from "cookie-parser";
+import Chat from './controllers/chat.controller.js';
+import cluster from "cluster"
+import os from 'os';
+const numCPUs = os.cpus().length;
 //import minimist from 'minimist';
 
 
@@ -28,7 +32,17 @@ import routerInfo from "./routes/info.routes.js"
 import routerRandom from './routes/randoms.routes.js'
 
 
-const app = express();
+if (cluster.isMaster) {
+    console.log(`Master ${process.pid} is running`);
+    for (let i = 0; i < numCPUs; i++) {
+        cluster.fork();
+    }
+    cluster.on("exit", (worker, code, signal) => {
+        console.log(`Worker ${worker.process.pid} died`);
+        cluster.fork();
+    });
+} else {
+    const app = express();
 const server = http.createServer(app);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -100,7 +114,7 @@ app.use(session({
 
 
 //**********CHAT MANAGER***********************************************************************************************
-import Chat from './controllers/chat.controller.js';
+
 const chat = new Chat();
 
 io.on("connection", async (socket) => {
@@ -123,12 +137,6 @@ io.on("connection", async (socket) => {
   });
 })
 //*********************************************************************************************************
-app.get('/', (req, res) => {
-   res.send(`
-      <h1>Express server</h1>
-      <h2>process - ${process.pid} en puerto ${PORT} </h2>
-   `)
-})
 
 app.all('*', (req, res) => { //MENSAJE PARA RUTA NO IMPLEMENTADA:
   res.status(501).json({ error: -2, descripcion: `Ruta no implementada` })
@@ -136,3 +144,4 @@ app.all('*', (req, res) => { //MENSAJE PARA RUTA NO IMPLEMENTADA:
 const PORT = parseInt(process.argv[2]) || 8080;
 server.listen(PORT, () => console.log(`🚀 Server started on port http://localhost:${PORT} - process ${process.pid}`),);
 server.on('error', (err) => console.log(err));
+}

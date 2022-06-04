@@ -6,7 +6,12 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon --inspect ./server.js --port 8080"
+    "server": "nodemon --inspect ./server.js 8080",
+    "pm2-fork": "pm2 start ./server.js --name server1 --watch -- 8080",
+    "4ever": "forever start ./server.js 8086",
+    "cluster": "node ./cluster.js 8081",
+    "pm2-cluster": "pm2 start ./pm2.config.cjs",
+    "pm2-cluster-1": "pm2 start ./server.js --name server2 -i max --watch -- 8080"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +30,7 @@
     "minimist": "^1.2.6",
     "mongoose": "^6.3.0",
     "nodemon": "^2.0.15",
+    "os": "^0.1.2",
     "socket.io": "^4.4.1",
     "uniqid": "^5.4.0"
   },
