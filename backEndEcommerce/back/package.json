@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node ./utils/benchmark.js",
     "server": "nodemon --inspect ./server.js 8080",
+    "start": "0x ./server.js",
     "pm2-fork": "pm2 start ./server.js --name server1 --watch -- 8080",
     "4ever": "forever start ./server.js 8086",
     "cluster": "node ./cluster.js 8081",
@@ -17,8 +18,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autocannon": "^7.9.0",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
     "connect-mongo": "^4.6.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
@@ -32,7 +35,9 @@
     "nodemon": "^2.0.15",
     "os": "^0.1.2",
     "socket.io": "^4.4.1",
-    "uniqid": "^5.4.0"
+    "uniqid": "^5.4.0",
+    "winston": "^3.7.2",
+    "winston-levelonly": "^1.0.3"
   },
   "devDependencies": {
     "@faker-js/faker": "^6.2.0"

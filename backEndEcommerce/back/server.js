@@ -1,3 +1,14 @@
+//PROFILING
+// node --prof server.js
+// artillery quick --count 50 -n 20 "http://localhost:8080/api/info" > conConsole.txt
+// artillery quick --count 50 -n 20 "http://localhost:8080/api/info" > noConsole.txt
+// node --prof-process nombredelarchivo.log> nuevoNombreProcess.txt
+
+//AUTOCANNON
+// npm run start
+// npm run test
+
+
 //Requerimientos
 import express from "express";
 import dotenv from "dotenv";
@@ -7,7 +18,10 @@ import { Server } from 'socket.io'
 import mongoStore from "connect-mongo";
 import session from "express-session";
 import cookieParser from "cookie-parser";
+import logger from './utils/logger.js';
+import compression from 'compression';
 //import minimist from 'minimist';
+
 
 
 dotenv.config();
@@ -32,6 +46,7 @@ const app = express();
 const server = http.createServer(app);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(compression());
 app.use(cookieParser());
 app.use(cors({ credentials: true, origin: true }))
 app.use(session({
@@ -131,8 +146,10 @@ app.get('/', (req, res) => {
 })
 
 app.all('*', (req, res) => { //MENSAJE PARA RUTA NO IMPLEMENTADA:
-  res.status(501).json({ error: -2, descripcion: `Ruta no implementada` })
+   logger.warn(`${req.method}  - ${req.originalUrl} - INEXISTENTE.`);
+   res.status(501).json({ error: -2, descripcion: `Ruta no implementada` })
 })
+logger.info(process.argv)
 const PORT = parseInt(process.argv[2]) || 8080;
-server.listen(PORT, () => console.log(`🚀 Server started on port http://localhost:${PORT} - process ${process.pid}`),);
-server.on('error', (err) => console.log(err));
+server.listen(PORT, () => logger.info(`🚀 Server started on port http://localhost:${PORT} - process ${process.pid}`));
+server.on('error', (err) => logger.error(`error ${err}`));

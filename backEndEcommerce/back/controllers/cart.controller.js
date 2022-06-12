@@ -1,5 +1,6 @@
 import "../db/db.js";
 import { CartModel } from "../models/cart.model.js";
+import logger from '../utils/logger.js';
 
 class Cart {
     constructor() { }
@@ -10,7 +11,7 @@ class Cart {
             const carts = await CartModel.find();
             return carts;
         } catch (err) {
-            console.log(err, 'Ooops, there are no products');
+            logger.warn(err, 'Ooops, there are no products');
             return null
         }
     }
@@ -28,7 +29,7 @@ class Cart {
             const ID = newCart._id;
             return ID;
         } catch (err) {
-            throw new Error(`No se pudo crear el carrito ${err}`);
+            logger.error(`No se pudo crear el carrito ${err}`)
         }
     }
 
@@ -39,11 +40,11 @@ class Cart {
             if (cart) {
                 return cart;
             } else {
-                console.log('cart does not exist')
+                logger.warn('Cart does not exist')
                 return null
             }
         } catch (err) {
-            console.log(err, 'Error, file not found');
+            logger.error(`No se pudo encontrar el carrito ${err}`);
             return err;
         }
     }
@@ -61,10 +62,10 @@ class Cart {
             }
              await CartModel.updateOne({ _id: idcart }, {products:cart.products}).
                 then(() => console.log('Carrito actualizado')).catch((err) => {
-                console.log("Entro al catch", err);
+                logger.error(`Cart no updated-${err}`);
             });
         } catch (error) {
-            console.log(error)
+            logger.error(`Cart no updated-${err}`);
         }
     }
 
@@ -75,11 +76,11 @@ class Cart {
         try {
              await CartModel.updateOne({ _id: idcart }, {products:cart.products}).
                 then(() => console.log('Producto borrado')).catch((err) => {
-                console.log("ENTRO AL CATCH------------------------------------", err);
+                logger.error(`Prod not deleted-${err}`);
                 });
             return 'Exito'
         } catch (err) {
-            console.log('ENTRO AL OTRO CATCH----------------------------------', err)
+            logger.error(`Prod not deleted-${err}`)
             return 'Fallo'
         }
     }
@@ -93,11 +94,11 @@ class Cart {
                 await CartModel.deleteOne({ _id: idcart })
                     .then((res) => console.log(res, 'Cart deleted!')).catch((err) => console.log(err));;
             } else {
-                console.log('Cart does not exist')
+                logger.error(`Cart does not exist-${err}`);
                 return 'Cart does not exist'
             }
         } catch (err) {
-            console.log('Error, file not found');
+            logger.error(`Cart not deleted-${err}`);
             return null;
         }
     }

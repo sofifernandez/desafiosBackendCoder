@@ -1,0 +1,21 @@
+
+{
+  message: 'GET  - /dkjshskj - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-06-11T16:39:03.666Z'
+}
+{
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-06-11T16:39:04.246Z'
+}
+{
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-06-11T16:40:28.113Z'
+}
+{
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-06-11T17:00:09.405Z'
+}

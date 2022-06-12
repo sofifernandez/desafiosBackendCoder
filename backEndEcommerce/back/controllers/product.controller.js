@@ -1,5 +1,6 @@
 import "../db/db.js";
 import { ProductModel } from "../models/product.model.js";
+import logger from '../utils/logger.js';
 
 
 class Product {
@@ -10,7 +11,7 @@ class Product {
             const prods = await ProductModel.find();
             return prods;
         } catch (err) {
-            console.log(err, 'Ooops, there are no products');
+            logger.error(`${err}-No products were loaded`)
             return null
         }
     }
@@ -20,7 +21,7 @@ class Product {
             const prod = await ProductModel.findOne({ _id: id });
             return prod;
         } catch (err) {
-            console.log(err, 'Product does not exist')
+            logger.error(`${err}-Cannot get requested product`)
         }
     }
     //ELIMINAR PRODUCTOS CON UN DETERMINADO ID (CHECK)
@@ -38,6 +39,7 @@ class Product {
             const newProd = await new ProductModel(producto);
             await newProd.save().then((res) => console.log(res)).catch((err) => console.log(err));
         } catch (err) {
+            logger.error(`${err}-Product not saved`)
             return err
         }
     }
@@ -45,13 +47,13 @@ class Product {
     //MODIFICAR PRODUCTOS EXISTENTES (CHECK)
     async updateById(IDupdate, data) {
         try {
-            console.log(IDupdate)
             await ProductModel.updateOne({ _id: IDupdate }, data).
-                then(() => console.log('Producto actualizado')).catch((err) => {
-                console.log("Entro al catch", err);
+                then(() => logger.info(`Product ${IDupdate} updated`)).catch((err) => {
+                    logger.error(`${err}-Product not updated`);
             });
             return 'Success!'
         } catch (err) {
+            logger.error(`${err}-Product not updated`);
             return err
         }
     }

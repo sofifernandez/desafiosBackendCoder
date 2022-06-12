@@ -2,6 +2,7 @@ import express  from 'express';
 import minimist from 'minimist';
 import os from 'os';
 const numCPUs = os.cpus().length;
+//import logger from '../utils/logger.js';
 
 const routerInfo = express.Router();
 
@@ -15,8 +16,9 @@ routerInfo.get("/", (req, res) => {
     html += `<li>Versión Node: ${process.version}</li>`;
     html += `<li>Carpeta Proyecto: ${process.execPath}</li>`;
     html += `<li>Memoria Total Reservada (RSS): ${process.memoryUsage().rss}</li>`;
-    html += `<li>Núcelos: ${numCPUs}</li>`;
-    res.status(400).send(html);           
+    html += `<li>Núcelos: ${numCPUs}</li>`; 
+    //logger.info(`Get Info/ ${html}`);
+    res.status(200).send(html);
 });
 
 export default routerInfo

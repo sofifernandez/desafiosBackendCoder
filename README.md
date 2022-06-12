@@ -47,3 +47,11 @@
 # Challenge 14
 
 - Fork and child process
+
+# Challenge 15
+
+- Clusters
+
+# Challenge 16
+
+- Logs and profiling

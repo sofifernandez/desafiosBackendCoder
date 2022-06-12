@@ -1,6 +1,7 @@
 import jwt from 'jsonwebtoken'
 import { createUser, getUser, getUserByeMail } from '../db/user.queries.js'
 import bcrypt from 'bcrypt'
+import logger from '../utils/logger.js';
 
 
 /* -------------------------------------------------------------------------- */
@@ -32,8 +33,9 @@ export const signUp = async (req, res, next) => {
     } else {
       res.send(false)
     }
-  } catch (error) {
-    next(error)
+  } catch (err) {
+    logger.error(`${err}-Error signing up client`)
+    next(err)
   }
 }
   
@@ -65,9 +67,10 @@ export const login = async (req, res, next) => {
     } else {
       res.send(false)
     }
-  } catch (error) {
-    error.status = 500
-    next(error)
+  } catch (err) {
+    err.status = 500
+    logger.error(`${err}-Error in sign in`)
+    next(err)
   }
 }
 
@@ -102,13 +105,15 @@ export const verifyToken = (req, res, next) => {
         res.send({ user: req.user })
       })
     } else {
-      const error = new Error('Token is required')
-      error.status = 401
-      error.code = 'UNAUTHORIZED'
-      res.send(error)
+      const err = new Error('Token is required')
+      err.status = 401
+      err.code = 'UNAUTHORIZED'
+      logger.error(`${err}-Error authentication failed`)
+      res.send(err)
     }
-  } catch (error) {
-    next(error)
+  } catch (err) {
+    logger.error(`${err}-Error authentication failed`)
+    next(err)
   }
 }
 

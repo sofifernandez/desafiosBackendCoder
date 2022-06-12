@@ -1,5 +1,6 @@
 import "../db/db.js";
 import { ChatModel } from "../models/chat.model.js";
+import logger from '../utils/logger.js';
 
 
 class Chat {
@@ -11,7 +12,7 @@ class Chat {
             const chats = await ChatModel.find().sort({ created_at: -1 });
             return chats;
         } catch (err) {
-            console.log(err, 'Ooops, there are no chats');
+            logger.warn(`${err}-there are no chats`);
             return null
         }
     }
