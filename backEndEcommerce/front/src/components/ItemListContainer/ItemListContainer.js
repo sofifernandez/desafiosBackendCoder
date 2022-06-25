@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import axios from 'axios'
 
-export const ItemListContainer = () => {
 
+export const ItemListContainer = () => {
   const URI = 'http://localhost:8080/api/productos'
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-    getProds()
+    getProds();
   }, []);
 
   const getProds = async () => {

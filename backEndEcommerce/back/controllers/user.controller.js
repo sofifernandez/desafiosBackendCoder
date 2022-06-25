@@ -2,6 +2,7 @@ import jwt from 'jsonwebtoken'
 import { createUser, getUser, getUserByeMail } from '../db/user.queries.js'
 import bcrypt from 'bcrypt'
 import logger from '../utils/logger.js';
+import { mailNuevoUsuario } from './notification.controllers.js';
 
 
 /* -------------------------------------------------------------------------- */
@@ -9,12 +10,13 @@ import logger from '../utils/logger.js';
 /* -------------------------------------------------------------------------- */
 
 export const signUp = async (req, res, next) => {
-  const { firstName, lastName, email, password } = req.body.signUpInfo
+  const { firstName, lastName, direction, age, prefix, phone, email, password } = req.body.signUpInfo
   const alreadyExist = await getUserByeMail(email)
   try {
-    if (firstName && lastName && email && password && !alreadyExist) {
+    if (firstName && lastName && email && password && direction &&age && prefix && phone && !alreadyExist) {
       const hashPassword = bcrypt.hashSync(password, bcrypt.genSaltSync(10), null)
-      const user = await createUser({ firstName, lastName, email, password: hashPassword })
+      const user = await createUser({ firstName, lastName, direction, age, prefix, phone, email, password: hashPassword })
+      mailNuevoUsuario(user)
       const userToken = jwt.sign({
         id: user._id,
         name: user.firstName + ' ' + user.lastName,
@@ -78,10 +80,11 @@ export const login = async (req, res, next) => {
   /*                                    LOGOUT                                   */
 /* -------------------------------------------------------------------------- */
 export const logout = (req, res) => {
-  // console.log(res.cookie('connect.sid'))
-  // console.log(req.headers.cookie)
-  res.cookie("connect.sid", ' ', { maxAge: 100 })
-  jwt.destroy()
+  //jwt.destroy(); --> esto no funciona, dice que no existe la función
+  res.cookie("connect.sid", '', { maxAge: 1 }) //-> elimino el contenido de la cookie y además le doy una expiración de 1ms
+  res.send('destroy') //--> tengo que enviar algo, cualquier cosa, porque sino no funciona
+
+
 
   }
 
@@ -108,7 +111,7 @@ export const verifyToken = (req, res, next) => {
       const err = new Error('Token is required')
       err.status = 401
       err.code = 'UNAUTHORIZED'
-      logger.error(`${err}-Error authentication failed`)
+      //logger.error(`${err}-Error authentication failed`)
       res.send(err)
     }
   } catch (err) {

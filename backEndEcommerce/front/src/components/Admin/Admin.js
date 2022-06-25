@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-//import axios from '../../Middleware/axios.middleware.js'
 import { ProductForm } from "../ProductForm/ProductForm";
+
 
 
 
@@ -9,14 +9,16 @@ export const Admin = () => {
     const [signUpInfo, setSignUpInfo] = useState();
     const [user, setUser] = useState()
     const [errLogIn, setErrLogIn] = useState(false)
-    const [errSignUp, setErrSignUp]= useState(false)
+    const [errSignUp, setErrSignUp] = useState(false)
+    const [internationalPrefix, setInternationaPrefix] = useState();
 
     useEffect(() => {
         getUser()
+        phones()
     }, []);
 
     const getUser = async () => {
-        const res = await fetch('http://localhost:8080/api/user/admin', {
+        const res = await fetch('http://localhost:8080/api/user/verify', {
             withCredntials: true,
             credentials: 'include',
             method: 'POST'
@@ -24,7 +26,7 @@ export const Admin = () => {
         if (res.status === 401) {
             console.log('no user')
         } else {
-        setUser(res.user)
+            setUser(res.user)
         }
     }
 
@@ -55,14 +57,15 @@ export const Admin = () => {
             },
             body: JSON.stringify({ logInInfo })
         })
-        
+
         const resJSON = await res.json()
         if (!resJSON) {
             setErrLogIn(true)
         } else {
             setUser(resJSON.user)
-        } 
-        getUser()
+        }
+        await getUser()
+        window.location.reload()
     };
 
     const onHandleRegister = async (e) => {
@@ -77,13 +80,14 @@ export const Admin = () => {
             body: JSON.stringify({ signUpInfo })
         })
         const resJSON = await res.json()
-       if (!resJSON) {
+        if (!resJSON) {
             setErrSignUp(true)
         } else {
-           setUser(resJSON.user)
-           setErrSignUp(false)
-        } 
-        getUser()
+            setUser(resJSON.user)
+            setErrSignUp(false)
+        }
+        await getUser()
+        window.location.reload()
     }
 
     const onHandleLogOut = async (e) => {
@@ -97,8 +101,16 @@ export const Admin = () => {
             },
         })
         setUser(false)
+        window.location.reload()
 
     }
+
+    const phones = async () => {
+        const data = await (await fetch('https://gist.githubusercontent.com/kcak11/4a2f22fb8422342b3b3daa7a1965f4e4/raw/2cc0fcb49258c667f1bc387cfebdfd3a00c4a3d5/countries.json')).json();
+        setInternationaPrefix(data)
+    }
+    
+   
 
     return (
         <div className="row container-fluid justify-content-center mt-5 mx-0">
@@ -107,12 +119,20 @@ export const Admin = () => {
                 <div className="col-12 mb-2 row justify-content-center">
                     <input className="mb-2" type="text" name="firstName" placeholder="Nombre" onChange={handleFormSignUp} />
                     <input className="mb-2" type="text" name="lastName" placeholder="Apellido" onChange={handleFormSignUp} />
-                    <input className="mb-2" type="text" name="email" placeholder="email" onChange={handleFormSignUp} />
+                    <input className="mb-2" type="text" name="direction" placeholder="Dirección" onChange={handleFormSignUp} />
+                    <input className="mb-2" type="number" name="age" placeholder="Edad" onChange={handleFormSignUp} />
+                    <select name="prefix" className="form-select mb-2" aria-label="Default select example" onChange={handleFormSignUp}>
+                        <option defaultValue>Selecciona un país</option>
+                        {internationalPrefix ? internationalPrefix.map(
+                            (country) => (<option id={country.isoCode} key={country.isoCode} value={country.dialCode}>{country.name} ({country.dialCode})</option>)) : null}
+                    </select>
+                    <input className="mb-2" type="number" name="phone" placeholder="Teléfono" onChange={handleFormSignUp} />
+                     <input className="mb-2" type="text" name="email" placeholder="e-mail" onChange={handleFormSignUp} />
                     <input className="mb-2" type="text" name="password" placeholder="Contraseña" onChange={handleFormSignUp} />
                     <button type='submit' className='mt-1 col-5 btnCheckout mb-3 fs-4' onClick={onHandleRegister}>Registrarse</button>
                 </div>
             </form>
-            {errSignUp? <div className="row justify-content-center text-center">Error al registrarse</div>: null}
+            {errSignUp ? <div className="row justify-content-center text-center">Error al registrarse</div> : null}
             <form className="row col-12 col-md-6 justify-content-center" name='formLogIn' id='formLogIn'>
                 <h2>Login usuario</h2>
                 <div className="col-11 mb-2 row justify-content-center">
@@ -122,8 +142,8 @@ export const Admin = () => {
                     <button type='submit' className='mt-1 col-5 btnCheckout mb-3 fs-4' onClick={onHandleLogOut}>Log out</button>
                 </div>
             </form>
-            {errLogIn? <div className="row justify-content-center text-center">Usuario o contraseña incorrecto!</div>: null}
-            
+            {errLogIn ? <div className="row justify-content-center text-center">Usuario o contraseña incorrecto!</div> : null}
+
             {user ?
                 <div className="row justify-content-center">
                     <h2 className="text-center">Hola! {user.name}</h2>

@@ -9,6 +9,26 @@ const Schema = new mongoose.Schema({
     type: String,
     required: true
   },
+    direction: {
+    type: String,
+    required: true,
+    unique: true
+  },
+    age: {
+    type: String,
+    required: true,
+    unique: true
+  },
+    prefix: {
+    type: String,
+    required: true,
+    unique: true
+  },
+    phone: {
+    type: String,
+    required: true,
+    unique: true
+  },
   email: {
     type: String,
     required: true,

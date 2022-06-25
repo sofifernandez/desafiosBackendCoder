@@ -12,7 +12,7 @@ const userRouter = express.Router();
 userRouter.post('/login', login) //  api/user/login
 userRouter.get('/logout', logout)
 userRouter.post('/signUp', signUp)
-userRouter.post('/admin', verifyToken)
+userRouter.post('/verify', verifyToken)
 
 
 export default userRouter

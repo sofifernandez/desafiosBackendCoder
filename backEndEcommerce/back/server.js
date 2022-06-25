@@ -151,5 +151,5 @@ app.all('*', (req, res) => { //MENSAJE PARA RUTA NO IMPLEMENTADA:
 })
 logger.info(process.argv)
 const PORT = parseInt(process.argv[2]) || 8080;
-server.listen(PORT, () => logger.info(`🚀 Server started on port http://localhost:${PORT} - process ${process.pid}`));
+server.listen(PORT, () => console.log(`🚀 Server started on port http://localhost:${PORT} - process ${process.pid}`));
 server.on('error', (err) => logger.error(`error ${err}`));

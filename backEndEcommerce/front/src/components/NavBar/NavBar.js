@@ -11,7 +11,7 @@ export const NavBar = () => {
             <nav id="menuPrincipal" className="d-none d-md-block mb-4 fixed-top pb-5 px-0">
                 <ul className="row px-0 mx-0 justify-content-center">
                     <li className="col-2"><NavLink className={({ isActive }) => (isActive ? "px-2 seccion-activa-md" : "px-2")} to={'/'}>HOME</NavLink></li>
-                    <li className="col-2"><NavLink className={({ isActive }) => (isActive ? "px-2 seccion-activa-md" : "px-2")} to={'/form'}>ADMIN</NavLink></li>
+                    <li className="col-2"><NavLink className={({ isActive }) => (isActive ? "px-2 seccion-activa-md" : "px-2")} to={'/form'}>Ingresar</NavLink></li>
                     <li className="col-2"><CartWidget /> </li>
                 </ul>
             </nav>
@@ -35,8 +35,8 @@ export const NavBar = () => {
                         </button>
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                             <li><NavLink className={({ isActive }) => (isActive ? "dropdown-item seccion-activa" : "dropdown-item")} to={'/'}>HOME</NavLink></li>
-                            <li><NavLink className={({ isActive }) => (isActive ? "dropdown-item seccion-activa" : "dropdown-item")} to={'/form'}>ADMIN</NavLink></li>
-                            
+                            <li><NavLink className={({ isActive }) => (isActive ? "dropdown-item seccion-activa" : "dropdown-item")} to={'/form'}>Ingresar</NavLink></li>
+
                         </ul>
                     </div>
                 </div>

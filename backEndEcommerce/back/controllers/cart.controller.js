@@ -2,6 +2,7 @@ import "../db/db.js";
 import { CartModel } from "../models/cart.model.js";
 import logger from '../utils/logger.js';
 
+
 class Cart {
     constructor() { }
     
@@ -17,9 +18,10 @@ class Cart {
     }
 
     //NUEVO CARRITO
-    async newCart() {
+    async newCart(user) {
         const date = new Date().toLocaleString();
         const cart = {
+            user:user,
             created_at: date,
             products: []
         };
@@ -40,7 +42,23 @@ class Cart {
             if (cart) {
                 return cart;
             } else {
-                logger.warn('Cart does not exist')
+                //logger.warn('Cart does not exist')
+                return null
+            }
+        } catch (err) {
+            logger.error(`No se pudo encontrar el carrito ${err}`);
+            return err;
+        }
+    }
+
+        // OBTENER CARRITO POR USER
+    async getCartByUser(user) {
+        try {
+            const cart = await CartModel.findOne({ user: user });
+            if (cart) {
+                return cart;
+            } else {
+                //logger.warn('Cart does not exist')
                 return null
             }
         } catch (err) {
@@ -65,7 +83,7 @@ class Cart {
                 logger.error(`Cart no updated-${err}`);
             });
         } catch (error) {
-            logger.error(`Cart no updated-${err}`);
+            logger.error(`Cart no updated-${error}`);
         }
     }
 

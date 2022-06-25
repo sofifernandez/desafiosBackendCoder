@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { createContext } from "react";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { useUserContext } from '../../contexts/UserContext';
 
 /*creo el context*/
 const CartContext = createContext();
@@ -14,6 +15,8 @@ export const useCartContext = () => useContext(CartContext);
 /* hago el return del provider */
 export const CartProvider = ({ children }) => {
 
+    const { user } = useUserContext()
+
     //STATES
     const [cartId, setCartId] = useState();
     const [cart, setCart] = useState([]);
@@ -22,36 +25,38 @@ export const CartProvider = ({ children }) => {
     const MySwal = withReactContent(Swal);
 
     useEffect(() => {
-        getCarts()
-    }, []);
+        getCart(user)
+    }, [user]);
 
 
-   
     //CREATE NEW CART 
     const newCart = async () => {
-        await axios.post(URI)
-                    .then((response) => {
-            setCartId(response.data)
-        }, (error) => {
-            console.log(error);
-                    })
+        await axios.post(URI, user)
+            .then((response) => {
+                setCartId(response.data)
+            }, (error) => {
+                console.log(error);
+            })
     }
 
+
+
     // GET CART BY ID-------------------------------------------------------------------------------
-    const getCarts = async () => {
-        const res = await axios
-            .get(URI) //--> GET ALL CARTS
-        const allCarts = res.data
-        console.log(allCarts)
-        if (allCarts.length > 0) {
-            const idCart = allCarts[0]._id //--> selecciono el primero del array, despues será según usuario digo yo...
-            const req = await axios //--> GET CART BY ID
-                .get(URI + `/${idCart}`)
-            const userCart = req.data
-            setCart(userCart.products)
-            setCartId(userCart._id)
+    const getCart = async (user) => {
+        if (user) {
+            const res = await axios
+                .get(`http://localhost:8080/api/carrito/user/${user.email}`) //--> GET ALL CARTS
+            const userCart = await res.data
+            if (userCart) {
+                setCart(userCart.products)
+                setCartId(userCart._id)
+
+
+            }
         }
+
     }
+
 
     //DELETE CART BY ID
     const deleteCart = async () => {
@@ -66,7 +71,7 @@ export const CartProvider = ({ children }) => {
     const addToCart = async (item, counter, onCartPage = false) => {
         if (cartId === undefined) {
             await newCart()
-            await getCarts()
+            await getCart()
         }
         if (!onCartPage) {
             const existe = cart.some(el => el._id === item._id);
@@ -78,7 +83,7 @@ export const CartProvider = ({ children }) => {
                     cart[objIndex].total = cart[objIndex].precio * cart[objIndex].quantity
                     // SEND TO BACK-----------------------------------------------------
                     await axios.post(URI + `/${cartId}/productos`, cart[objIndex])
-                    
+
                     MySwal.fire({
                         icon: 'success',
                         text: `Agregaste ${item.nombre} de nuevo al carrito`,
@@ -107,7 +112,7 @@ export const CartProvider = ({ children }) => {
                 // SEND TO BACK--------------------------------
                 await axios.post(URI + `/${cartId}/productos`, item)
                 setCart([...cart, item])
-                
+
 
                 MySwal.fire({
                     icon: 'success',
@@ -147,6 +152,19 @@ export const CartProvider = ({ children }) => {
         }
     }
 
+    const finishPurchase = async () => {
+        const req = await axios.post(URI + `/${cartId}/confirmed`)
+        if (req.status === 200) {
+            MySwal.fire({
+                icon: 'success',
+                text: `Gracias por tu compra!`,
+                timer: 1300,
+                showConfirmButton: false,
+
+            })
+            deleteCart()
+        }
+    }
 
     //OTROS
     //     const showCart = () => {
@@ -155,7 +173,7 @@ export const CartProvider = ({ children }) => {
     //   };
 
     return (
-        <CartContext.Provider value={{ newCart, deleteCart, addToCart, removeItem, getCarts, cartId, cart }}>
+        <CartContext.Provider value={{ newCart, deleteCart, addToCart, removeItem, finishPurchase, getCart, cartId, cart }}>
             {children}
         </CartContext.Provider>
     );

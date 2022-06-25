@@ -2,6 +2,7 @@ import { UserModel } from '../models/user.model.js'
 import bcrypt from 'bcrypt'
 import logger from '../utils/logger.js';
 
+
 export const getUser = async ({ email, password }) => {
   try {
     const user = await UserModel.findOne({ email })
@@ -28,7 +29,7 @@ export const getUserByeMail = async (email) => {
   try {
     const user = await UserModel.findOne({ email })
     if (user) {
-     return true
+     return user
     } else {
       return false
    }
@@ -37,11 +38,15 @@ export const getUserByeMail = async (email) => {
   }
 }
 
-export const createUser = async ({ firstName, lastName, email, password }) => {
+export const createUser = async ({ firstName, lastName, direction,age,prefix,phone, email, password }) => {
   try {
     const user = await UserModel.create({
       firstName,
       lastName,
+      direction,
+      age,
+      prefix,
+      phone,
       email,
       password
     })

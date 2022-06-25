@@ -55,3 +55,11 @@
 # Challenge 16
 
 - Logs and profiling
+
+# Challenge 17
+
+- Use Heroku as server host
+
+# Challenge 18
+
+- Third version of final project. Mongoose + Express + React + User authorization and authentication with JWT + MAILER/TWILO

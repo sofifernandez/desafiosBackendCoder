@@ -7,7 +7,7 @@ import withReactContent from 'sweetalert2-react-content'
 import { useCartContext } from '../../contexts/cart/CartContext';
 
 export const Cart = () => {
-  const { cart, deleteCart } = useCartContext()
+  const { cart, deleteCart, finishPurchase } = useCartContext()
   const [cartTotal, setCartTotal] = useState(cart.reduce((amount, item) => item.total + amount, 0))
   const MySwal = withReactContent(Swal)
 
@@ -24,6 +24,19 @@ export const Cart = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         deleteCart()
+      }
+    })
+  }
+
+  const handleFinishPurchase = () => {
+    MySwal.fire({
+      html: `¿Estás seguro/a que deseas finalizar tu compra?`,
+      showDenyButton: true,
+      confirmButtonText: 'Sí',
+      denyButtonText: 'No',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        finishPurchase()
       }
     })
   }
@@ -52,9 +65,10 @@ export const Cart = () => {
             </div>
 
             <div className="justify-content-between row mb-5">
-              <button className='mt-5 col-6 col-sm-4 btnVaciar' onClick={handleDeleteCart}>Vaciar carrito</button>
-              <button className='mt-5 col-6 col-sm-5 btnSeguirComprando'><NavLink className='fs-6' to={'/'}>Seguir
-                comprando</NavLink></button>
+              <button className='mt-5 col-4 col-sm-4 btnVaciar' onClick={handleDeleteCart}>Vaciar carrito</button>
+              {/* <button className='mt-5 col-4 col-sm-4 btnSeguirComprando'><NavLink className='fs-6' to={'/'}>Seguir
+                comprando</NavLink></button> */}
+              <button className='mt-5 col-4 col-sm-4 btnSeguirComprando' onClick={handleFinishPurchase}>COMPRAR!</button>
 
             </div>
           </div>

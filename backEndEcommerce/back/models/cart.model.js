@@ -1,6 +1,11 @@
 import mongoose from "mongoose";
 
 const Schema = new mongoose.Schema({
+  user: {
+    type: String,
+    required: true,
+    max:100
+  },
   created_at: {
     type: String,
     required: true,

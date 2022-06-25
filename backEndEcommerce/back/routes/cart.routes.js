@@ -2,11 +2,13 @@ import express  from 'express';
 import Cart from '../controllers/cart.controller.js'
 const c = new Cart();
 const routerCart = express.Router();
+import { mailNuevaVenta, wpNuevaVenta, smsNuevaVenta } from '../controllers/notification.controllers.js';
+import { getUserByeMail } from '../db/user.queries.js'
 
 //--> NEW CART
 routerCart.post('/', async (req, res) => { 
-  const id = await c.newCart()
-  console.log(typeof(id))
+  const  user  = req.body
+  const id = await c.newCart(user.email)
   res.status(200).send(id) 
 });
 
@@ -17,6 +19,17 @@ routerCart.get('/', async (req, res) => {
     res.status(400).json({ "InternalError": 'CART Not Found.' })
   } else {
     res.status(200).send(carts);
+  }
+})
+
+//--> GET CART by USER
+routerCart.get('/user/:user', async (req, res) => {
+  const user = req.params.user
+  const cart = await c.getCartByUser(user)
+  if (!cart) {
+    res.status(200).json( null )
+  } else {
+    res.status(200).send(cart);
   }
 })
 
@@ -58,5 +71,16 @@ routerCart.delete('/:id/productos/:idProd', async (req, res) => {
   res.status(200).json({ "mensaje": 'success' })
 
 });
+
+routerCart.post('/:id/confirmed', async (req, res) => {
+  const id = req.params.id
+  const cart = await c.getCartById(id);
+  const user = await getUserByeMail(cart.user)
+  //console.log(user)
+  mailNuevaVenta(cart, user);
+  wpNuevaVenta(cart)
+  smsNuevaVenta(cart,user)
+  res.status(200).json({"mensaje": 'success'})
+})
 
 export default routerCart;
