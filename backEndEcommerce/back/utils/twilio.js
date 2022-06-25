@@ -9,8 +9,7 @@ const client = twilio(process.env.SID_TWILIO, process.env.TOKEN_TWILIO);
 export const sendSMS = async (body, to) => {
   try {
     const message = {
-        body: body,
-        //from:`${process.env.SMS_TWILO}`,
+      body: body,
       messagingServiceSid: `${process.env.MESSAGING_SERVICE_SID}`,
       to: to,
     };
