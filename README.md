@@ -63,3 +63,7 @@
 # Challenge 18
 
 - Third version of final project. Mongoose + Express + React + User authorization and authentication with JWT + MAILER/TWILO
+
+# Challenge 19
+
+- Layered design

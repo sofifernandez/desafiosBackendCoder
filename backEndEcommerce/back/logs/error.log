@@ -1,24 +1,3 @@
-
-{
-  message: 'GET  - /dkjshskj - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-06-11T16:39:03.666Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-06-11T16:39:04.246Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-06-11T16:40:28.113Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-06-11T17:00:09.405Z'
-}
 {
   message: 'Error: Token is required-Error authentication failed',
   level: 'error',
@@ -555,4 +534,9 @@
   message: 'Cart no updated-CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Cart"',
   level: 'error',
   timestamp: '2022-06-25T02:10:26.158Z'
+}
+{
+  message: 'Cart no updated-CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Cart"',
+  level: 'error',
+  timestamp: '2022-07-02T21:24:04.664Z'
 }

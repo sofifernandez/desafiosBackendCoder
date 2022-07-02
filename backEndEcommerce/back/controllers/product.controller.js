@@ -1,64 +1,58 @@
-import "../db/db.js";
-import { ProductModel } from "../models/product.model.js";
-import logger from '../utils/logger.js';
+import Product from '../services/product.service.js';
+const p = new Product();
 
 
-class Product {
-    constructor() {}
-    // LEER EL ARCHIVO (CHECK)
-    async getAll() {
-        try {
-            const prods = await ProductModel.find();
-            return prods;
-        } catch (err) {
-            logger.error(`${err}-No products were loaded`)
-            return null
-        }
-    }
-    // OBTENER PRODUCTO CON UN DETERMINADO ID (CHECK)
-    async getById(id) {
-        try {
-            const prod = await ProductModel.findOne({ _id: id });
-            return prod;
-        } catch (err) {
-            logger.error(`${err}-Cannot get requested product`)
-        }
-    }
-    //ELIMINAR PRODUCTOS CON UN DETERMINADO ID (CHECK)
-    async deleteById(itemId) {
-        try {
-            await ProductModel.deleteOne({ _id: itemId }).then((res) => console.log(res, 'Product deleted!')).catch((err) => console.log(err));;
-        } catch (err) {
-            return 'Product does not exist'
-        }
-    }
-
-    //AGREGAR PRODUCTOS (CHECK)
-    async saveProduct(producto) {
-        try {
-            const newProd = await new ProductModel(producto);
-            await newProd.save().then((res) => console.log(res)).catch((err) => console.log(err));
-        } catch (err) {
-            logger.error(`${err}-Product not saved`)
-            return err
-        }
-    }
-
-    //MODIFICAR PRODUCTOS EXISTENTES (CHECK)
-    async updateById(IDupdate, data) {
-        try {
-            await ProductModel.updateOne({ _id: IDupdate }, data).
-                then(() => logger.info(`Product ${IDupdate} updated`)).catch((err) => {
-                    logger.error(`${err}-Product not updated`);
-            });
-            return 'Success!'
-        } catch (err) {
-            logger.error(`${err}-Product not updated`);
-            return err
-        }
-    }
+// -------------------PRODUCTS--------------------------------//
+//GET PRODUCTS
+export const getAllProds= async (req, res) => {
+  const productos = await p.getAll();
+  res.status(200).send(productos);
 }
 
-export default Product;
+//GET PRODUCTS by ID 
+export const prodsByID= async (req, res) => {
+  const id = req.params.id;
+  const producto = await p.getById(id);
+  if (!producto) {
+    res.status(400).json({ "InternalError": 'Product Not Found.' })
+  } else {
+     res.status(200).send(producto);
+  }
+};
+
+//-->AGREGAR productos al listado
+export const addProduct= async (req, res) => {
+    const { nombre, tipo, precio, imagen, stock } = req.body.productData;
+    const newProd = {
+        nombre,
+        tipo,
+        precio,
+        imagen,
+        stock,
+    }
+    const msg = p.saveProduct(newProd)
+    res.status(200).json(msg);
+};
+
+
+//-->ACTUALIZAR un producto por su id 
+export const updateProd= async (req, res) => { //localhost:8080/api/admin/productos/627538fe498e9db6791b15eb
+  const IDupdate = req.params.id;
+  const itemUpdate = req.body.productData;
+  res.send(p.updateById(IDupdate, itemUpdate))
+};
+
+//BORRAR un producto por su id 
+export const deleteProdByID= async (req, res) => {
+    try {
+        const itemId = req.params.id;
+        res.send(p.deleteById(itemId))
+    }
+    catch (err) {
+        res.status(400).json({ error: err });
+    }
+};
+
+
 
 
