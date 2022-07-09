@@ -1,8 +1,8 @@
 import Cart from '../services/cart.service.js';
-const c = new Cart();
+const c = Cart.initInstancia();
 import { mailNuevaVenta, wpNuevaVenta, smsNuevaVenta } from '../controllers/notification.controllers.js';
 import User from '../services/user.services.js';
-const u = new User();
+const u = User.initInstancia();
 
 export const newCart= async (req, res) => { 
   const  user  = req.body

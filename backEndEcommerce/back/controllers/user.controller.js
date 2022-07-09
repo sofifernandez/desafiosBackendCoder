@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
 import User from '../services/user.services.js';
-const u = new User();
+const u = User.initInstancia();
 
 import bcrypt from 'bcrypt'
 import logger from '../utils/logger.js';

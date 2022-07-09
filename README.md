@@ -67,3 +67,7 @@
 # Challenge 19
 
 - Layered design
+
+# Challenge 20
+
+- Implementing DAOs, Factory and singleton

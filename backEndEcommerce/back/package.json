@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "node ./utils/benchmark.js",
-    "server": "nodemon --inspect ./server.js 8080",
+    "server": "nodemon --inspect ./server.js 8080 --db mongo",
     "start": "0x ./server.js",
     "pm2-fork": "pm2 start ./server.js --name server1 --watch -- 8080",
     "4ever": "forever start ./server.js 8086",

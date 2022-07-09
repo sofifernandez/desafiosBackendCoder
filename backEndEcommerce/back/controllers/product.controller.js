@@ -1,5 +1,5 @@
 import Product from '../services/product.service.js';
-const p = new Product();
+const p = Product.initInstancia();
 
 
 // -------------------PRODUCTS--------------------------------//
