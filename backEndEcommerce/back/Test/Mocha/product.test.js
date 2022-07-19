@@ -14,9 +14,8 @@ export default class TestProductos {
     getAll = async () => {
         try {
             const res = await axios.get(`${server}/api/productos`)
-            res.data.map((prod) => {
-                this.productos.push(prod);
-            });
+            console.log(res)
+            return res
         } catch (err) {
             console.log(err);
         }

@@ -1,21 +1,23 @@
 //import supertest from 'supertest'
 import request from 'supertest';
-request = request('http://localhost:8080');
+const requ = request('http://localhost:8080');
 import { expect } from 'chai';
-import {productoNuevo} from '../utils/productos.js'
+import { productoNuevo } from '../utils/productos.js'
 
 
-describe('Test de CRUD de Productos con Supertest y Chai', () => {
-    it('Deberia Retornar un status 200.', async () => {
-        let response = await request.get('/api/productos');
-        console.log('Status Respuesta', response.status)
+describe('Test de Productos con Supertest', () => {
+    //obtener la lista de productos, enviar petición
+    it('Retornar un status 200.', async () => {
+        let response = await requ.get('/api/productos');
+        console.log('Status:', response.status)
         expect(response.status).to.equal(200);
     });
 
-    it('Deberia Agregar un Nuevo Producto, y devolverlo', async () => {
-        let response = await request.post('/api/productos').send(productoNuevo);
-        console.log('Status Respuesta', response.status);
-        console.log('Body Respuesta', response.body);
+    //agrega producto nuevo a la lista
+    it('Agregar un nuevo producto, y devolverlo', async () => {
+        let response = await requ.post('/api/productos').send({'productData': productoNuevo});
+        console.log('Status:', response.status);
+        console.log('Body:', response.body);
         expect(response.status).to.equal(200);
 
         const producto = response.body;
@@ -24,7 +26,5 @@ describe('Test de CRUD de Productos con Supertest y Chai', () => {
         expect(producto.precio).to.equal(productoNuevo.precio);
         expect(producto.imagen).to.equal(productoNuevo.imagen);
         expect(producto.stock).to.equal(productoNuevo.stock);
-        expect(producto.quantity).to.equal(productoNuevo.quantity);
-        expect(producto.total).to.equal(productoNuevo.total);
-    });    
+    });
 });

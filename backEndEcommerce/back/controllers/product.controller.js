@@ -21,7 +21,7 @@ export const prodsByID= async (req, res) => {
 };
 
 //-->AGREGAR productos al listado
-export const addProduct= async (req, res) => {
+export const addProduct = async (req, res) => {
     const { nombre, tipo, precio, imagen, stock } = req.body.productData;
     const newProd = {
         nombre,
@@ -30,8 +30,8 @@ export const addProduct= async (req, res) => {
         imagen,
         stock,
     }
-    const msg = p.saveProduct(newProd)
-    res.status(200).json(msg);
+  const msg = await p.saveProduct(newProd)
+  res.status(200).json(msg);
 };
 
 

@@ -7,8 +7,8 @@
   "scripts": {
     "test": "node ./utils/benchmark.js",
     "server": "nodemon --inspect ./server.js 8080 --db mongo",
-     "mocha": "mocha ./Test/Mocha/mocha.test.js",
-    "supertest": "mocha ./Test/Supertest/supertest.chai.test.js",
+    "mocha": "mocha ./Test/Mocha/mocha.test.js",
+    "supertest": "mocha ./Test/Supertest/supertest.chai.test.js --timeout 5000",
     "start": "0x ./server.js",
     "pm2-fork": "pm2 start ./server.js --name server1 --watch -- 8080",
     "4ever": "forever start ./server.js 8086",

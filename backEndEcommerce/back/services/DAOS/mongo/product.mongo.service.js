@@ -38,6 +38,7 @@ class Product {
         try {
             const newProd = await new ProductModel(producto);
             await newProd.save().then((res) => console.log(res)).catch((err) => console.log(err));
+            return newProd
         } catch (err) {
             logger.error(`${err}-Product not saved`)
             return err

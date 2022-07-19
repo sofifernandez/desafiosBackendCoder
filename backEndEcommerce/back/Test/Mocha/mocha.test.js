@@ -1,36 +1,36 @@
 import TestProductos from './product.test.js';
 import { strictEqual } from 'assert';
-import { productoNuevo, productoAModificar } from '../utils/producto.js';
+import { productoNuevo, productoAModificar } from '../utils/productos.js';
 
 describe('Test de CRUD de Productos', () => {
-    it('Deberia Agregar un Nuevo Producto, y devolverlo', async () => {
+    it('Agregar un nuevo producto, y devolverlo', async () => {
         const prueba = new TestProductos;
-        await prueba.addOne(productoNuevo);
-        const producto = await prueba.getById(productoNuevo.id);
+        const response = await prueba.addOne({'productData': productoNuevo});
+        const producto = await prueba.getById(response._id);
         strictEqual(productoNuevo.nombre, producto.nombre);
     });
 
-    it('Deberia Modificar El Nombre del Producto, y devolverlo', async () => {       
+
+    it('Modificar el stock del producto Quarter', async () => {       
         const prueba = new TestProductos;
-        await prueba.updateOne(productoAModificar.id, productoAModificar);
-        const producto = await prueba.getById(productoAModificar.id);
-        strictEqual(productoAModificar.nombre, producto.nombre);
+        await prueba.updateOne('627538fe498e9db6791b15eb', {'productData': productoAModificar});
+        const producto = await prueba.getById('627538fe498e9db6791b15eb');
+        strictEqual(productoAModificar.stock, producto.stock);
     });
 
-    it('Deberia Eliminar el Producto', async () => {
-        const id = '652';
+    it('Eliminar el producto agregado con supertest llamado Prueba', async () => {
+        const id = '62d615181f40e3ebdbd33fdc'; //el ID va variando
         const prueba = new TestProductos;
         await prueba.deleteOne(id);
-        const producto = prueba.productos.find(prod => prod.id === id);
+        const producto = await prueba.getById(id);
         strictEqual(producto, undefined);
     });
 
-    it('Deberia Traer al Menos Un Producto.', async () => {
+    it('Traer los productos', async () => {
         const prueba = new TestProductos;
-        await prueba.getAll();
-        let rsdo = false;
-        if (prueba.productos.length > 0) {rsdo = true}
-        strictEqual(rsdo, true);
+        const prods = await prueba.getAll();
+        console.log(prods.data)
+        strictEqual(prods.data.length>0, true);
     });
   
 });
