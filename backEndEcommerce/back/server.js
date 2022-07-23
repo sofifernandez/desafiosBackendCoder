@@ -40,6 +40,7 @@ import routerCart from "./routes/cart.routes.js"
 import userRouter from "./routes/user.routes.js"
 import routerInfo from "./routes/info.routes.js"
 import routerRandom from './routes/randoms.routes.js'
+import routerGraphql from "./routes/graphql.routes.js";
 
 
 const app = express();
@@ -74,7 +75,8 @@ app.use('/api/productos', routerProd)
 app.use('/api/carrito', routerCart)
 app.use('/api/user', userRouter)
 app.use('/api/info', routerInfo)
-app.use('/api/randoms',routerRandom)
+app.use('/api/randoms', routerRandom)
+app.use('/api/graphql', routerGraphql)
 
 
 const io = new Server(server, {

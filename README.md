@@ -75,3 +75,7 @@
 # Challenge 21
 
 - Testing: mocha, supertest, chai
+
+# Challenge 22
+
+- GraphQL

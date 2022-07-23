@@ -13,15 +13,15 @@ routerProd.get("/:id", productController.prodsByID);
 
 
 //-->AGREGAR productos al listado
-//routerProd.post('/', verifyToken, productController.addProduct);
-routerProd.post('/', productController.addProduct);
+routerProd.post('/', verifyToken, productController.addProduct);
+//routerProd.post('/', productController.addProduct);
 
 //-->ACTUALIZAR un producto por su id 
-//routerProd.put('/:id', verifyToken, productController.updateProd);
-routerProd.put('/:id', productController.updateProd);
+routerProd.put('/:id', verifyToken, productController.updateProd);
+//routerProd.put('/:id', productController.updateProd);
 
 //BORRAR un producto por su id 
-//routerProd.delete('/:id', verifyToken, productController.deleteProdByID);
-routerProd.delete('/:id',productController.deleteProdByID);
+routerProd.delete('/:id', verifyToken, productController.deleteProdByID);
+//routerProd.delete('/:id',productController.deleteProdByID);
 
 export default routerProd;
