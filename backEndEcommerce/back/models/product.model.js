@@ -32,7 +32,7 @@ const Schema = new mongoose.Schema({
   total: {
     type: Number,
     required: false,
-    default: null,
+    default: 0,
   },
 });
 

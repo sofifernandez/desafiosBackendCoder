@@ -47,7 +47,7 @@ const prod1 = {
     imagen: "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/anillos/quarter.png",
     stock: 12,
     quantity: 0,
-    total: null
+    total: 0
 };
 const prod2 = {
     nombre: "Patrón y Patrona",
@@ -56,7 +56,7 @@ const prod2 = {
     imagen: "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/anillos/patron_a.png",
     stock: 13,
     quantity: 0,
-    total: null
+    total: 0
 };
 const prod3 = {
     nombre: "Mold",
@@ -65,7 +65,7 @@ const prod3 = {
     imagen: "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/anillos/mold2.png",
     stock: 4,
     quantity: 0,
-    total: null
+    total: 0
 }
 
 const prod4 = {
@@ -75,7 +75,7 @@ const prod4 = {
     imagen: "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/anillos/dropEggLine.png",
     stock: 13,
     quantity: 0,
-    total: null
+    total: 0
 }
 
 const prod5 = {
@@ -85,7 +85,7 @@ const prod5 = {
     imagen: "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/aros/line.png",
     stock: 12,
     quantity: 0,
-    total: null
+    total: 0
 }
 
 const prod6 = {
@@ -95,7 +95,7 @@ const prod6 = {
     imagen: "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/aros/quarter.png",
     stock: 5,
     quantity: 0,
-    total: null
+    total: 0
 }
 
 const prod7 = {
@@ -105,7 +105,7 @@ const prod7 = {
     imagen: "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/aros/quarter_long.png",
     stock: 3,
     quantity: 0,
-    total: null
+    total: 0
 }
 
 const prod8 = {
@@ -115,13 +115,13 @@ const prod8 = {
     imagen: "https://raw.githubusercontent.com/Sofia-Microb/JavaScript-Proyecto/ac1f9db41714c13de4f3230e3dd9f2ce20089fbd/imagenes/aros/solid.png",
     stock: 14,
     quantity: 0,
-    total: null
+    total: 0
 }
 
 export default async function createDocs() {
   try {
     await ProductModel.create([prod1, prod2, prod3,prod4,prod5,prod6, prod7, prod8]);
-    await ChatModel.create([chat1, chat2, chat3]);
+    // await ChatModel.create([chat1, chat2, chat3]);
     console.log('Datos subidos!');
   } catch (error) {
     console.log(error);

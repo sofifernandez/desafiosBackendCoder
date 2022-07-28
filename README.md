@@ -79,3 +79,7 @@
 # Challenge 22
 
 - GraphQL
+
+# Challenge 23
+
+- Implementing frameworks: Sails
