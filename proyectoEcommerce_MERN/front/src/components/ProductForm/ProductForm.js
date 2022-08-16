@@ -8,6 +8,7 @@ export const ProductForm = () => {
     const [productData, setProductData] = useState()
     const [prodId, setProdId] = useState('');
 
+    console.log(prodId)
 
     //Manejar el estado
     const handleFormChange = (e) => {

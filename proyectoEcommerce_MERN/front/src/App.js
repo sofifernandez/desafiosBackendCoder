@@ -8,8 +8,6 @@ import { UserProvider } from './contexts/UserContext';
 import { Cart } from './components/Cart/Cart'
 import { LogIn } from "./components/LogIn/LogIn"
 
-
-
 function App() {
   return (
     <UserProvider>

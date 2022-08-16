@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const Schema = new mongoose.Schema({
   author: {
-    type: Object,
+    type: String,
     required: true,
   },
   text: {

@@ -23,7 +23,8 @@ export const signUp = async (req, res, next) => {
         id: user._id,
         name: user.firstName + ' ' + user.lastName,
         email: user.email,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        role: user.role
       }, process.env.API_SECRET, { expiresIn: '1h' })
       req.session.token = userToken
       res.send({
@@ -31,7 +32,8 @@ export const signUp = async (req, res, next) => {
         user: {
           id: user._id,
           name: user.firstName + ' ' + user.lastName,
-          email: user.email
+          email: user.email,
+          role: user.role
         }
       })
     } else {
@@ -56,7 +58,8 @@ export const login = async (req, res, next) => {
         id: user._id,
         name: user.firstName + ' ' + user.lastName,
         email: user.email,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        role: user.role
       }, process.env.API_SECRET, { expiresIn: '10m' })
 
       req.session.token = userToken
@@ -65,7 +68,8 @@ export const login = async (req, res, next) => {
         user: {
           id: user._id,
           name: user.firstName + ' ' + user.lastName,
-          email: user.email
+          email: user.email,
+          role: user.role
         }
       })
     } else {
@@ -110,7 +114,6 @@ export const verifyToken = (req, res, next) => {
       const err = new Error('Token is required')
       err.status = 401
       err.code = 'UNAUTHORIZED'
-      //logger.error(`${err}-Error authentication failed`)
       res.send(err)
     }
   } catch (err) {

@@ -22,7 +22,6 @@ export const prodsByID = async (req, res) => {
 
 //GET PRODUCTS by Category
 export const prodsByCat = async (req, res) => {
-  console.log(req.params.categoria)
   const category = req.params.categoria;
   const producto = await p.getByCat(category);
   if (!producto) {

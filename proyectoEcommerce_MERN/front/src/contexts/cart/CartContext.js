@@ -28,18 +28,15 @@ export const CartProvider = ({ children }) => {
         getCart(user)
     }, [user]);
 
-
     //CREATE NEW CART 
     const newCart = async () => {
-        await axios.post(URI, user)
+            await axios.post(URI, user)
             .then((response) => {
                 setCartId(response.data)
             }, (error) => {
                 console.log(error);
             })
     }
-
-
 
     // GET CART BY ID-------------------------------------------------------------------------------
     const getCart = async (user) => {
@@ -50,8 +47,6 @@ export const CartProvider = ({ children }) => {
             if (userCart) {
                 setCart(userCart.products)
                 setCartId(userCart._id)
-
-
             }
         }
 

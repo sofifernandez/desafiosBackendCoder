@@ -8,13 +8,16 @@ const socket = io('http://localhost:8080')
 export const Chat = () => {
     const [chats, setChats] = useState('')
     const { user } = useUserContext()
- 
+
     useEffect(() => {
         const socket = io('http://localhost:8080')
+        // if (user.email) {
+        //     socket.emit('getUser', user.email)
+        // }
         socket.on('sendMessages', (data) => {
             setChats(data)
         })
-    }, [])
+    }, [user])
 
     function addMessage(e) {
         socket.emit('fromFront', { author: user.email, text: e.target[0].value });
@@ -37,7 +40,7 @@ export const Chat = () => {
             <div className="row col-12 justify-content-center mt-3">
                 {chats.length > 0 ? chats.map((chat) => (
                     <div key={chat._id} className="col-12 row justify-content-center mb-3">
-                        <div className="col-8 col-md-3 text-center">{chat.author.nombre}</div>
+                        <div className="col-8 col-md-3 text-center">{chat.author}</div>
                         <div className="col-8 col-md-3 text-center">{chat.created_at}</div>
                         <div className="col-8 col-md-3 text-center">{chat.text}</div>
                     </div>

@@ -17,6 +17,16 @@ class Chat {
         }
     }
 
+    async getUserChats(email) {
+        try {
+            const chats = await ChatModel.find({ author: email });
+            return chats;
+        } catch (err) {
+            logger.warn(`${err}-there are no chats`);
+            return null
+        }
+    }
+
     async saveNewMessage(message) {
         try {
             const newMessage = await new ChatModel(message);

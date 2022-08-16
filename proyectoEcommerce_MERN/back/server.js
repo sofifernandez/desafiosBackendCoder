@@ -9,7 +9,6 @@ import mongoStore from "connect-mongo";
 import session from "express-session";
 import cookieParser from "cookie-parser";
 import logger from './utils/logger.js';
-import compression from 'compression';
 //import minimist from 'minimist';
 
 
@@ -29,8 +28,6 @@ import routerProd from "./routes/product.routes.js";
 import routerCart from "./routes/cart.routes.js"
 import userRouter from "./routes/user.routes.js"
 import routerInfo from "./routes/info.routes.js"
-import routerRandom from './routes/randoms.routes.js'
-import routerGraphql from "./routes/graphql.routes.js";
 
 
 const app = express();
@@ -84,9 +81,6 @@ app.use('/api/productos', routerProd)
 app.use('/api/carrito', routerCart)
 app.use('/api/user', userRouter)
 app.use('/api/info', routerInfo)
-app.use('/api/randoms', routerRandom)
-app.use('/api/graphql', routerGraphql)
-
 
 // const io = new Server(server, {
 //    cors: {
@@ -118,12 +112,6 @@ app.use(session({
 }));
 
 
-//****************************************************************************/
-//DESCOMENTAR PARA SUBIR LOS PRODUCTOS Y CHATS A LA BASE DE DATOS ECOMMERCE de Mongo
-// import createDocs from './db/createDocs.js'
-// createDocs();
-//****************************************************************************/
-
 
 //**********CHAT MANAGER***********************************************************************************************
 import Chat from './controllers/chat.controller.js';
@@ -142,6 +130,11 @@ io.on("connection", async (socket) => {
    const oldMessages = await chat.getAllChats()  //Obtener chats guardados
    socket.emit("sendMessages", oldMessages)   //Enviar chats guardados al Front:
 
+   // socket.on("getUser", async (userEmail) => {
+   //    console.log(userEmail)
+   //    const oldMessages = await chat.getAllChats()  //Obtener chats guardados
+   //    socket.emit("sendMessages", oldMessages)   //Enviar chats guardados al Front:
+   // })
 
    socket.on("fromFront", async (newMessage) => {  // Obtener los nuevos chats desde el front
       newMessage.created_at = new Date().toLocaleString();
@@ -151,8 +144,6 @@ io.on("connection", async (socket) => {
       io.sockets.emit("sendMessages", newChats); //==> devuelve a todos los usuarios conectados 
    });
 })
-
-
 //*********************************************************************************************************
 
 

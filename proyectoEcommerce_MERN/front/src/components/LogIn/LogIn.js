@@ -112,6 +112,7 @@ export const LogIn = () => {
         setInternationaPrefix(data)
     }
 
+
     //------------------------------------------------------------
 
     return (
@@ -162,7 +163,8 @@ export const LogIn = () => {
                 <div className="container mx-auto my-auto row justify-content-center">
                     <h2 className="text-center">Hola! {user.name}</h2>
                     <Chat />
-                </div>            
+                    </div>   
+                
             : null}
             
         </div>

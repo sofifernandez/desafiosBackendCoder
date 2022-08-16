@@ -2,7 +2,7 @@ import ProductMongo from './DAOS/mongo/product.mongo.service.js'
 import minimist from "minimist";
 
 const argv = minimist(process.argv.slice(2));
-const { db } = argv || 'sqlite';
+const { db } = argv || 'sqlite'; //No está implementado SQLITE, pero así se podría cargar
 
 let Instancia;
 switch (db) {
