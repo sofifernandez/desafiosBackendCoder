@@ -37,9 +37,28 @@ const app = express();
 const server = http.createServer(app);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(compression());
+//app.use(compression());
 app.use(cookieParser());
 app.use(cors({ credentials: true, origin: true }))
+
+
+// app.use(function (req, res, next) {
+//     res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     res.header("Access-Control-Allow-Credentials", true); // allows cookie to be sent
+//     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, HEAD, DELETE"); // you must specify the methods used with credentials. "*" will not work. 
+//     next();
+// });
+
+const io = new Server(server, {
+   cors: {
+      origin: "http://localhost:3000",
+      methods: ["GET", "POST", "PUT"],
+      allowedHeaders: ["my-custom-header"],
+      credentials: true
+   }
+})
+
 app.use(session({
    store: mongoStore.create({
       mongoUrl: process.env.MONGO_URI,
@@ -69,14 +88,14 @@ app.use('/api/randoms', routerRandom)
 app.use('/api/graphql', routerGraphql)
 
 
-const io = new Server(server, {
-   cors: {
-      origin: "http://localhost:3000",
-      methods: ["GET", "POST"],
-      allowedHeaders: ["my-custom-header"],
-      credentials: true
-   }
-})
+// const io = new Server(server, {
+//    cors: {
+//       origin: "http://localhost:3000",
+//       methods: ["GET", "POST"],
+//       allowedHeaders: ["my-custom-header"],
+//       credentials: true
+//    }
+// })
 
 
 app.use(session({
@@ -123,15 +142,14 @@ io.on("connection", async (socket) => {
    const oldMessages = await chat.getAllChats()  //Obtener chats guardados
    socket.emit("sendMessages", oldMessages)   //Enviar chats guardados al Front:
 
-   socket.on("sendNewChat", async (newMessage) => {  // Obtener los nuevos chats desde el front
-      console.log('ENTRAAAAAA---------------------------------')
+
+   socket.on("fromFront", async (newMessage) => {  // Obtener los nuevos chats desde el front
       newMessage.created_at = new Date().toLocaleString();
       console.log(newMessage)
       await chat.saveNewMessage(newMessage); //-->meterlos en la db
       const newChats = await chat.getAllChats()//--> volver a obtener todo
       io.sockets.emit("sendMessages", newChats); //==> devuelve a todos los usuarios conectados 
    });
-   
 })
 
 
