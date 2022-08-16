@@ -1,4 +1,22 @@
-## This is the repository for my backend class in CoderHouse
+## This is the repository for my backend class and project in CoderHouse Academy
+
+An ecommerce project I developed for my backen course in CoderHouse. This is actually my friend's side business, which you can follow [here](https://www.instagram.com/ringo.orfebreria/?hl=es).
+
+I made it a FullStack project to practice, so it is actually a MERN Stack ecommerce.
+
+### Clone it from GitHub :hammer_and_wrench:
+
+\_
+git init
+git clone https://github.com/sofifernandez/desafiosBackendCoder/tree/main/proyectoEcommerce_MERN
+npm run cargarDatos #first time only to upload data
+npm run server
+
+## Author :nail_care:
+
+- **Sofía Fernández Ciganda** -- [Linkedin](https://www.linkedin.com/in/sof%C3%ADa-fern%C3%A1ndez-ciganda-76986042/)
+
+## Check out the challenge descriptions and everything we learned in the course
 
 # Challenge 3
 
