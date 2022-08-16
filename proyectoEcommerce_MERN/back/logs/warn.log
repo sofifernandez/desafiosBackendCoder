@@ -12,2337 +12,275 @@
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-06-11T16:40:28.113Z'
+  timestamp: '2022-08-15T16:40:19.528Z'
+}
+{
+  message: 'GET  - /produsctos - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-15T16:40:48.928Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-06-11T17:00:09.405Z'
+  timestamp: '2022-08-15T16:40:49.472Z'
 }
 {
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:05:10.513Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:09:47.663Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:10:21.576Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:15:16.710Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:15:33.572Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:15:51.810Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:18:38.954Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:18:52.254Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:19:52.636Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:20:48.246Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:21:21.524Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:25:01.381Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:26:17.076Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:26:22.780Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:26:30.395Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:26:48.176Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:27:08.247Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:27:12.050Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:27:54.897Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:27:59.101Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:28:22.272Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:28:55.668Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:29:06.210Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:29:26.559Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:29:35.403Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:32:29.269Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:33:44.338Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:37:59.127Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:38:21.115Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:39:33.713Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:40:21.229Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:40:46.828Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:40:52.969Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:41:19.800Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:41:53.286Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:42:10.797Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:42:36.704Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:43:17.271Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:43:54.426Z'
+  message: 'GET  - /productos - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-15T16:40:57.224Z'
 }
 {
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:45:00.885Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:45:09.080Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:45:27.612Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:45:31.178Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:45:44.302Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:52:22.305Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:54:09.570Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T17:58:36.191Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:00:04.148Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:00:11.161Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:01:40.403Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:01:44.619Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:02:17.886Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:02:24.834Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:02:37.276Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:13:08.862Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:14:14.336Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:16:18.074Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:16:35.429Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:17:23.101Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:18:35.799Z'
-}
-{
-  code: undefined,
-  level: 'error',
-  timestamp: '2022-06-24T18:20:10.186Z'
-}
-{
-  message: "TypeError: Cannot read property '_id' of undefined-Error signing up client",
-  level: 'error',
-  timestamp: '2022-06-24T18:20:10.189Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:22:08.001Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:28:37.195Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:30:02.395Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:37:02.499Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T18:40:34.851Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T20:00:37.140Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T20:01:21.823Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T20:01:26.184Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T20:01:46.688Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T20:09:21.667Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T20:14:00.117Z'
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-15T16:40:57.836Z'
 }
 {
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T20:14:33.473Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T20:14:37.441Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T20:15:00.297Z'
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-15T16:41:20.526Z'
 }
 {
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T20:15:46.224Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T20:16:59.183Z'
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-15T16:42:17.094Z'
 }
 {
-  message: 'Error: Token is required-Error authentication failed',
+  message: 'CastError: Cast to ObjectId failed for value "62e2b0ec03d72fdb029daf433" (type string) at path "_id" for model "Product"-Cannot get requested product',
   level: 'error',
-  timestamp: '2022-06-24T20:31:53.794Z'
+  timestamp: '2022-08-15T16:42:35.936Z'
 }
 {
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T20:32:23.279Z'
-}
-{
-  message: 'Error: Token is required-Error authentication failed',
-  level: 'error',
-  timestamp: '2022-06-24T20:32:30.935Z'
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-15T16:42:36.550Z'
 }
 {
-  message: 'Error: Token is required-Error authentication failed',
+  message: 'CastError: Cast to ObjectId failed for value "62e2b0ec03d72fdb029daf433" (type string) at path "_id" for model "Product"-Cannot get requested product',
   level: 'error',
-  timestamp: '2022-06-24T20:32:48.295Z'
+  timestamp: '2022-08-15T16:43:26.192Z'
 }
 {
-  message: 'Error: Token is required-Error authentication failed',
+  message: 'CastError: Cast to ObjectId failed for value "62e2b0ec03d72fdb029daf433" (type string) at path "_id" for model "Product"-Cannot get requested product',
   level: 'error',
-  timestamp: '2022-06-24T20:32:51.156Z'
+  timestamp: '2022-08-15T16:44:48.543Z'
 }
 {
   message: 'Cart no updated-CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Cart"',
   level: 'error',
-  timestamp: '2022-06-24T21:56:08.868Z'
+  timestamp: '2022-08-15T16:49:42.885Z'
 }
 {
-  message: 'ReferenceError: fecha is not defined-Error signing up client',
+  message: "Cart no updated-TypeError: Cannot read property 'products' of null",
   level: 'error',
-  timestamp: '2022-06-24T23:26:34.817Z'
+  timestamp: '2022-08-15T16:49:45.809Z'
 }
 {
-  status: 400,
-  code: 21211,
-  moreInfo: 'https://www.twilio.com/docs/errors/21211',
-  details: undefined,
+  message: 'CastError: Cast to ObjectId failed for value "anillo" (type string) at path "_id" for model "Product"-Cannot get requested product',
   level: 'error',
-  timestamp: '2022-06-25T01:32:00.984Z'
+  timestamp: '2022-08-15T17:01:53.257Z'
 }
 {
-  message: 'Cart no updated-CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Cart"',
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-15T17:01:53.843Z'
+}
+{
+  message: 'CastError: Cast to ObjectId failed for value "anillos" (type string) at path "_id" for model "Product"-Cannot get requested product',
   level: 'error',
-  timestamp: '2022-06-25T01:34:39.642Z'
+  timestamp: '2022-08-15T17:01:56.635Z'
 }
 {
-  status: 400,
-  code: 21211,
-  moreInfo: 'https://www.twilio.com/docs/errors/21211',
-  details: undefined,
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-15T17:01:57.249Z'
+}
+{
+  message: 'CastError: Cast to ObjectId failed for value "anillos" (type string) at path "_id" for model "Product"-Cannot get requested product',
   level: 'error',
-  timestamp: '2022-06-25T01:35:14.064Z'
+  timestamp: '2022-08-15T17:02:57.385Z'
 }
 {
-  status: 400,
-  code: 21211,
-  moreInfo: 'https://www.twilio.com/docs/errors/21211',
-  details: undefined,
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-15T17:02:57.889Z'
+}
+{
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-15T17:05:56.248Z'
+}
+{
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-15T17:06:05.056Z'
+}
+{
+  message: 'CastError: Cast to ObjectId failed for value "aros" (type string) at path "_id" for model "Product"-Cannot get requested product',
   level: 'error',
-  timestamp: '2022-06-25T01:35:14.067Z'
+  timestamp: '2022-08-15T17:06:55.542Z'
 }
 {
-  message: 'Cart no updated-CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Cart"',
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-15T17:06:56.152Z'
+}
+{
+  message: 'CastError: Cast to ObjectId failed for value "aros" (type string) at path "_id" for model "Product"-Cannot get requested product',
   level: 'error',
-  timestamp: '2022-06-25T01:39:06.292Z'
+  timestamp: '2022-08-15T17:08:11.769Z'
 }
 {
-  status: 400,
-  code: 21211,
-  moreInfo: 'https://www.twilio.com/docs/errors/21211',
-  details: undefined,
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-15T17:08:12.338Z'
+}
+{
+  message: 'CastError: Cast to ObjectId failed for value "aros" (type string) at path "_id" for model "Product"-Cannot get requested product',
   level: 'error',
-  timestamp: '2022-06-25T01:39:27.214Z'
+  timestamp: '2022-08-15T17:09:08.254Z'
 }
 {
-  message: 'Cart no updated-CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Cart"',
-  level: 'error',
-  timestamp: '2022-06-25T01:50:07.104Z'
-}
-{
-  status: 400,
-  code: 21910,
-  moreInfo: 'https://www.twilio.com/docs/errors/21910',
-  details: undefined,
-  level: 'error',
-  timestamp: '2022-06-25T01:50:23.959Z'
-}
-{
-  status: 400,
-  code: 21606,
-  moreInfo: 'https://www.twilio.com/docs/errors/21606',
-  details: undefined,
-  level: 'error',
-  timestamp: '2022-06-25T01:50:23.971Z'
-}
-{
-  message: 'Cart no updated-CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Cart"',
-  level: 'error',
-  timestamp: '2022-06-25T01:51:23.119Z'
-}
-{
-  status: 400,
-  code: 21606,
-  moreInfo: 'https://www.twilio.com/docs/errors/21606',
-  details: undefined,
-  level: 'error',
-  timestamp: '2022-06-25T01:51:30.919Z'
-}
-{
-  message: 'Cart no updated-CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Cart"',
-  level: 'error',
-  timestamp: '2022-06-25T01:54:03.446Z'
-}
-{
-  status: 400,
-  code: 21606,
-  moreInfo: 'https://www.twilio.com/docs/errors/21606',
-  details: undefined,
-  level: 'error',
-  timestamp: '2022-06-25T01:54:12.205Z'
-}
-{
-  message: 'Cart no updated-CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Cart"',
-  level: 'error',
-  timestamp: '2022-06-25T02:06:42.668Z'
-}
-{
-  message: 'Cart no updated-CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Cart"',
-  level: 'error',
-  timestamp: '2022-06-25T02:09:30.472Z'
-}
-{
-  status: 400,
-  code: 21212,
-  moreInfo: 'https://www.twilio.com/docs/errors/21212',
-  details: undefined,
-  level: 'error',
-  timestamp: '2022-06-25T02:09:41.341Z'
-}
-{
-  message: 'Cart no updated-CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Cart"',
-  level: 'error',
-  timestamp: '2022-06-25T02:10:26.158Z'
-}
-{
-  message: 'Cart no updated-CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Cart"',
-  level: 'error',
-  timestamp: '2022-07-02T21:24:04.664Z'
-}
-{
-  message: "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/-Error connecting to Mongo",
-  level: 'error',
-  timestamp: '2022-07-08T10:29:51.837Z'
-}
-{
-  message: "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/-Error connecting to Mongo",
-  level: 'error',
-  timestamp: '2022-07-08T10:34:20.987Z'
-}
-{
-  message: "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/-Error connecting to Mongo",
-  level: 'error',
-  timestamp: '2022-07-08T10:38:12.526Z'
-}
-{
-  message: "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/-Error connecting to Mongo",
-  level: 'error',
-  timestamp: '2022-07-21T22:17:16.407Z'
-}
-{
-  message: "MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/-Error connecting to Mongo",
-  level: 'error',
-  timestamp: '2022-07-21T22:18:14.073Z'
-}
-{
-  message: 'GET  - /graphql - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:19:31.808Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:19:32.385Z'
-}
-{
-  message: 'GET  - /graphqlHTTP - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:20:05.545Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:20:05.991Z'
-}
-{
-  message: 'GET  - //api/graphql - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:20:27.475Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:20:27.978Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:20:34.280Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:21:17.959Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:21:19.291Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:01.165Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:10.060Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:10.877Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:11.109Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:11.345Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:11.800Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:13.170Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:13.899Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:49.304Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:49.523Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:49.784Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:50.016Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:51.465Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:51.859Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:52.838Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:53.250Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:55.240Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:55.456Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:23:56.165Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:03.266Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:06.852Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:07.076Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:07.291Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:07.737Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:08.147Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:08.534Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:08.955Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:16.878Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:17.833Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:18.095Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:18.387Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:25.350Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:25.580Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:25.813Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:26.038Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:26.141Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:28.113Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:28.445Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:36.342Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:36.583Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:36.822Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:38.456Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:38.759Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:38.987Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:40.248Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:40.474Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:40.731Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:40.942Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:41.511Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:41.735Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:42.041Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:42.347Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:42.350Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:42.758Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:24:42.983Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:04.988Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:07.043Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:07.388Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:07.822Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:08.458Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:09.871Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:10.723Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:11.633Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:11.842Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:12.056Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:12.563Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:13.990Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:14.911Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:18.700Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:19.049Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:19.849Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:20.747Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:32.552Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:33.752Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:33.983Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:34.777Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:25:35.919Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:27:12.173Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:27:14.898Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:27:16.355Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:27:16.566Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:27:21.273Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:27:22.092Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:29:52.311Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:29:54.568Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:30:00.297Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:30:00.636Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:30:02.960Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:30:03.170Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:30:03.532Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:30:03.767Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:30:31.347Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:30:32.350Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:31:22.524Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:31:23.043Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:31:23.318Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:31:23.738Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:31:24.266Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:31:26.416Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:31:26.727Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:31:27.542Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:31:27.882Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:31:29.795Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:31:32.764Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:01.642Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:01.908Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:02.125Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:02.587Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:02.857Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:03.137Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:04.713Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:05.021Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:22.530Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:22.746Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:23.014Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:23.616Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:24.684Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:25.171Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:26.827Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:27.069Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:27.754Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:28.799Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:29.577Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:30.826Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:34.611Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:41.372Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:41.680Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:41.989Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:44.854Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:45.262Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:45.572Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:47.313Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:32:59.394Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:00.111Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:01.798Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:02.039Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:12.400Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:20.182Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:20.490Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:20.796Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:21.513Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:23.152Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:25.400Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:25.614Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:25.821Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:26.040Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:27.423Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:27.639Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:27.852Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:27.865Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:27.927Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:28.136Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:30.806Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:31.054Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:33.800Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:34.107Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:34.415Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:33:34.518Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:37:17.414Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:37:17.850Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:37:18.159Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:37:18.466Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:37:18.468Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:37:18.509Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:37:18.774Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:37:19.288Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:37:19.509Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:37:19.900Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:39:51.448Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:39:51.737Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:39:52.168Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:39:52.812Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:40:00.629Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:40:02.405Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:40:02.622Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:40:02.902Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:40:03.225Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:40:03.228Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:45:22.917Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:20.383Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:24.471Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:26.520Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:26.777Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:34.608Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:36.799Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:41.161Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:41.469Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:41.778Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:42.792Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:43.043Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:43.689Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:43.935Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:44.747Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:53.246Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:53.963Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:56.726Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:57.033Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:48:59.391Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:07.069Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:07.381Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:07.684Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:10.736Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:10.972Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:11.190Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:14.339Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:14.856Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:15.174Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:15.933Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:16.183Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:16.490Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:16.736Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:17.003Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:18.026Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:18.590Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:18.844Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:19.062Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:21.173Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:21.994Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:39.345Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:39.557Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:39.858Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:40.163Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:40.454Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:40.673Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:41.274Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:42.090Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:53.094Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:53.968Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:54.786Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:55.094Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:49:55.401Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:50:39.639Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:50:41.277Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:50:44.758Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:50:44.995Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:50:48.649Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:50:48.956Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:50:49.177Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:50:50.901Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:52:20.706Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:52:22.345Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:52:23.370Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:52:23.881Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:52:24.905Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:53:01.769Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:53:04.329Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:53:05.967Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:53:06.186Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:53:06.419Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T17:53:07.251Z'
-}
-{
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:07.504Z'
+  timestamp: '2022-08-15T17:09:08.862Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:07.732Z'
+  timestamp: '2022-08-15T17:12:02.122Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:08.425Z'
+  timestamp: '2022-08-15T17:14:36.369Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:09.755Z'
+  timestamp: '2022-08-15T17:15:05.986Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:10.063Z'
+  timestamp: '2022-08-15T17:16:13.103Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:10.370Z'
+  timestamp: '2022-08-15T17:17:28.825Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:11.702Z'
+  timestamp: '2022-08-15T17:18:02.446Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:12.678Z'
+  timestamp: '2022-08-15T17:19:22.488Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:13.544Z'
+  timestamp: '2022-08-15T17:19:33.805Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:13.854Z'
+  timestamp: '2022-08-15T17:47:44.417Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:14.161Z'
+  timestamp: '2022-08-15T17:48:23.088Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:15.183Z'
+  timestamp: '2022-08-15T17:48:26.196Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:15.797Z'
+  timestamp: '2022-08-15T17:48:44.627Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:16.126Z'
+  timestamp: '2022-08-15T17:49:14.119Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:16.822Z'
+  timestamp: '2022-08-15T17:49:30.093Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:53:17.206Z'
+  timestamp: '2022-08-15T17:50:04.708Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:55:43.231Z'
+  timestamp: '2022-08-15T17:50:34.485Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:55:44.666Z'
+  timestamp: '2022-08-15T17:53:23.369Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:57:29.448Z'
+  timestamp: '2022-08-15T17:54:40.159Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:58:46.428Z'
+  timestamp: '2022-08-15T17:55:19.134Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T17:58:47.060Z'
+  timestamp: '2022-08-15T17:55:56.618Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T18:14:38.759Z'
+  timestamp: '2022-08-15T17:56:15.698Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T18:14:50.331Z'
+  timestamp: '2022-08-15T17:56:33.156Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T18:14:52.072Z'
+  timestamp: '2022-08-16T12:35:58.590Z'
 }
 {
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:20:03.836Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:20:05.749Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:20:07.263Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:20:07.570Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:20:07.854Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:20:08.094Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:20:14.839Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:20:16.879Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:20:18.317Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:20:18.626Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:21:44.334Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:21:44.699Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:21:45.044Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:21:45.362Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:21:53.493Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:21:53.755Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:21:54.065Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:21:55.591Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:21:55.904Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:21:56.211Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:21:56.449Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:21:57.077Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:22:00.287Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:22:00.512Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:22:00.821Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:22:01.128Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:22:02.769Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:22:03.129Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:23:03.605Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:23:03.898Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:23:04.144Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:23:04.347Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:23:04.922Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:23:06.048Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:23:06.312Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:23:06.764Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:23:07.033Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:23:07.686Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:23:09.836Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:23:11.066Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:23:11.927Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:24:49.405Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:24:51.524Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:24:55.513Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:24:56.539Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:24:58.689Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:00.224Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:02.373Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:03.822Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:04.042Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:05.446Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:05.459Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:05.469Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:06.937Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:07.158Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:07.368Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:07.374Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:08.466Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:08.477Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:08.486Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:09.611Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:09.894Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:10.943Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
-  level: 'warn',
-  timestamp: '2022-07-23T18:25:11.183Z'
-}
-{
-  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  message: 'GET  - /chats - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T18:25:11.590Z'
+  timestamp: '2022-08-16T12:36:03.295Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T18:25:12.409Z'
+  timestamp: '2022-08-16T12:36:03.828Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T18:25:13.434Z'
+  timestamp: '2022-08-16T13:00:42.120Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T18:25:15.072Z'
+  timestamp: '2022-08-16T13:12:45.314Z'
 }
 {
   message: 'GET  - /favicon.ico - INEXISTENTE.',
   level: 'warn',
-  timestamp: '2022-07-23T18:25:21.462Z'
+  timestamp: '2022-08-16T13:21:45.246Z'
 }

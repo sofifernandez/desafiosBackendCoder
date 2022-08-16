@@ -6,7 +6,7 @@ import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetail
 import { CartProvider } from './contexts/cart/CartContext';
 import { UserProvider } from './contexts/UserContext';
 import { Cart } from './components/Cart/Cart'
-import { Admin } from "./components/Admin/Admin"
+import { LogIn } from "./components/LogIn/LogIn"
 
 
 
@@ -18,9 +18,10 @@ function App() {
           <NavBar />
           <Routes>
             <Route exact path="/" element={<ItemListContainer />} />
+            <Route exact path="/:categoria" element={<ItemListContainer />} />
             <Route exact path="/producto/:productoID" element={<ItemDetailContainer />} />
             <Route exact path="/cart" element={<Cart />} />
-            <Route exact path="/form" element={<Admin />} />
+            <Route exact path="/login" element={<LogIn />} />
           </Routes>
         </BrowserRouter>
       </CartProvider>

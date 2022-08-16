@@ -9,21 +9,20 @@ export const ItemDetailContainer = () => {
   const { productoID } = useParams();
   const [item, setItem] = useState(null);
 
-  useEffect( () => {
-  async function getProds(){
-    const res = await axios
-      .get(URI+`/${productoID}`)
-    setItem(res.data)
+  useEffect(() => {
+    async function getProds() {
+      const res = await axios.get(URI + `/${productoID}`)
+      setItem(res.data)
     }
     getProds()
-  	
+
   }, [productoID]);
 
 
   return (
     <>
       <main className='container-fluid row justify-content-center mt-0 mx-0 px-0 mb-5'>
-        {item ? <ItemDetail item={item} key={item._id} /> : "Loading..."}
+        {item ? <ItemDetail item={item} key={item._id} /> : "Ooops, no se encontró el producto"}
       </main>
     </>
   );

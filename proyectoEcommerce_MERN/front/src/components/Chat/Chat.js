@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import './Chat.scss'
 import { io } from 'socket.io-client'
 
-
 export const Chat = () => {
     const [chats, setChats] = useState('')
 
@@ -12,9 +11,14 @@ export const Chat = () => {
     }, [])
 
     function addMessage(e) {
+         e.preventDefault()
         const socket = io('http://localhost:8080')
-        e.preventDefault()
-        socket.emit('sendNewChat', { author: e.target[0].value, text: e.target[1].value })
+        console.log(socket)
+       
+        console.log(e.target[0].value)
+        const prueba= { author: e.target[0].value, text: e.target[1].value }
+        //socket.emit('sendNewChat', { author: e.target[0].value, text: e.target[1].value })
+        socket.emit('sendNewChat', prueba)
     }
 
     return (

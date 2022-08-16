@@ -5,16 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node ./utils/benchmark.js",
-    "server": "nodemon --inspect ./server.js 8080 --db mongo",
-    "mocha": "mocha ./Test/Mocha/mocha.test.js",
-    "supertest": "mocha ./Test/Supertest/supertest.chai.test.js --timeout 5000",
-    "start": "0x ./server.js",
-    "pm2-fork": "pm2 start ./server.js --name server1 --watch -- 8080",
-    "4ever": "forever start ./server.js 8086",
-    "cluster": "node ./cluster.js 8081",
-    "pm2-cluster": "pm2 start ./pm2.config.cjs",
-    "pm2-cluster-1": "pm2 start ./server.js --name server2 -i max --watch -- 8080"
+    "server": "nodemon --inspect ./server.js 8080 --db mongo"
   },
   "keywords": [],
   "author": "",

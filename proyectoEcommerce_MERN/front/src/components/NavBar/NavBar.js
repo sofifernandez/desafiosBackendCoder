@@ -11,7 +11,9 @@ export const NavBar = () => {
             <nav id="menuPrincipal" className="d-none d-md-block mb-4 fixed-top pb-5 px-0">
                 <ul className="row px-0 mx-0 justify-content-center">
                     <li className="col-2"><NavLink className={({ isActive }) => (isActive ? "px-2 seccion-activa-md" : "px-2")} to={'/'}>HOME</NavLink></li>
-                    <li className="col-2"><NavLink className={({ isActive }) => (isActive ? "px-2 seccion-activa-md" : "px-2")} to={'/form'}>Ingresar</NavLink></li>
+                    <li className="col-2"><NavLink className={({ isActive }) => (isActive ? "px-2 seccion-activa-md" : "px-2")} to={'/anillos'}>Anillos</NavLink></li>
+                    <li className="col-2"><NavLink className={({ isActive }) => (isActive ? "px-2 seccion-activa-md" : "px-2")} to={'/aros'}>Aros</NavLink></li>
+                    <li className="col-2"><NavLink className={({ isActive }) => (isActive ? "px-2 seccion-activa-md" : "px-2")} to={'/login'}>Log in</NavLink></li>
                     <li className="col-2"><CartWidget /> </li>
                 </ul>
             </nav>

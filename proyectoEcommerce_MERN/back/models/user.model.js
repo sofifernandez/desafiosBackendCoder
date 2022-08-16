@@ -12,22 +12,18 @@ const Schema = new mongoose.Schema({
     direction: {
     type: String,
     required: true,
-    unique: true
   },
     age: {
     type: String,
     required: true,
-    unique: true
   },
     prefix: {
     type: String,
     required: true,
-    unique: true
   },
     phone: {
     type: String,
     required: true,
-    unique: true
   },
   email: {
     type: String,
@@ -37,6 +33,11 @@ const Schema = new mongoose.Schema({
   password: {
     type: String,
     required: true
+  }, 
+  role: {
+    type: String,
+    default: 'client',
+    required: false
   }
 });
 

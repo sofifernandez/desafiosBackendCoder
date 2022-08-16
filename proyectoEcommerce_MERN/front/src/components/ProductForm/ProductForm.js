@@ -1,6 +1,5 @@
 import { useState } from "react";
 import './ProductForm.scss'
-import { Chat } from '../Chat/Chat'
 
 
 export const ProductForm = () => {
@@ -40,8 +39,6 @@ export const ProductForm = () => {
     const onHandleUpdate = async (e) => {
         e.preventDefault()
         //await axios.put(URI + `/${prodId}`, productData).then((response)=>console.log(response))
-        console.log(URI + `/${prodId}`)
-        console.log(prodId)
         const res = await fetch(URI  + `/${prodId}`, {
             withCredntials: true,
             credentials: 'include',
@@ -115,10 +112,6 @@ export const ProductForm = () => {
                         <button type='submit' className='mt-1 col-5 btnCheckout mb-1 fs-4' onClick={onHandleDelete}>Eliminar</button>
                     </div>
                 </form>
-            </div>
-
-            <div className="container my-auto row justify-content-center">
-                <Chat />
             </div>
         </div>
     )

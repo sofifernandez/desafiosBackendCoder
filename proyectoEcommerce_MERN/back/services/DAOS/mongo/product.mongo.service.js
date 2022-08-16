@@ -24,6 +24,18 @@ class Product {
             logger.error(`${err}-Cannot get requested product`)
         }
     }
+
+    async getByCat(tipo) {
+        try {
+            const prod = await ProductModel.find({ tipo: tipo });
+            return prod;
+        } catch (err) {
+            logger.error(`${err}-Cannot get requested product`)
+        }
+    }
+
+
+
     //ELIMINAR PRODUCTOS CON UN DETERMINADO ID (CHECK)
     async deleteById(itemId) {
         try {

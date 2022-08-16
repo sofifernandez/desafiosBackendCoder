@@ -16,7 +16,7 @@ class Chat {
             return null
         }
     }
-    //AGREGAR CHATS ()
+
     async saveNewMessage(message) {
         try {
             const newMessage = await new ChatModel(message);
