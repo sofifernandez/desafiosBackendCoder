@@ -18,14 +18,16 @@ class User {
                     const error = new Error('Password is not valid')
                     error.code = 'PASSWORD_NOT_VALID'
                     error.status = 401
-                    throw error
+                    console.log(error)
+                    return false
                 }
             }
         } catch (err) {
             const error = new Error(err.message || 'User not found')
             error.status = 404
             error.code = err.code
-            throw error
+            console.log(error)
+            return false
         }
     }
 

@@ -101,7 +101,7 @@ export const ProductForm = () => {
                         ))}
                     </div>
                     <div className="cart-btn mt-100 row justify-content-center">
-                        <button type='submit' className='mt-1 col-5 btnCheckout mb-3 fs-4' onClick={onHandleSubmit}>Submitir</button>
+                        <button type='submit' className='mt-1 col-5 btnCheckout mb-3 fs-4' onClick={onHandleSubmit}>Agregar</button>
                     </div>
                     <div className="form-group row justify-content-center">
                         <input className="mb-1 col-7" name='id' type="text" placeholder='ID' onChange={(e) => setProdId(e.target.value)} />

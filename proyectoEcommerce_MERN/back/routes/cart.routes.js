@@ -24,6 +24,7 @@ routerCart.post('/:id/productos', cartController.update);
 //--> DELETE PRODUCTS
 routerCart.delete('/:id/productos/:idProd', cartController.deleteProducts);
 
+//--> CONFIRMAR COMPRA
 routerCart.post('/:id/confirmed', cartController.confirmPurchase)
 
 export default routerCart;

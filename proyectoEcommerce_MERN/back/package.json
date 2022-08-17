@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon --inspect ./server.js 8080 --db mongo",
-    "cargarDatos": "node ./cargarDataMongo.js"
+    "server": "nodemon --inspect ./server.js --puerto 8080 --db mongo --exp 300s",
+    "cargarDatos": "node ./cargarDataMongo.js",
+    "devSQL": "nodemon --inspect ./server.js --puerto 8081 --db sqlite"
   },
   "keywords": [],
   "author": "",

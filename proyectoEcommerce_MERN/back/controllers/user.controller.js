@@ -5,6 +5,9 @@ const u = User.initInstancia();
 import bcrypt from 'bcrypt'
 import logger from '../utils/logger.js';
 import { mailNuevoUsuario } from './notification.controllers.js';
+import minimist from "minimist";
+const argv = minimist(process.argv.slice(2));
+const { exp } = argv;
 
 
 /* -------------------------------------------------------------------------- */
@@ -25,7 +28,7 @@ export const signUp = async (req, res, next) => {
         email: user.email,
         timestamp: new Date().toISOString(),
         role: user.role
-      }, process.env.API_SECRET, { expiresIn: '1h' })
+      }, process.env.API_SECRET, { expiresIn: exp })
       req.session.token = userToken
       res.send({
         token: userToken,
@@ -60,7 +63,7 @@ export const login = async (req, res, next) => {
         email: user.email,
         timestamp: new Date().toISOString(),
         role: user.role
-      }, process.env.API_SECRET, { expiresIn: '10m' })
+      }, process.env.API_SECRET, { expiresIn: exp })
 
       req.session.token = userToken
       res.send({
@@ -94,7 +97,7 @@ export const logout = (req, res) => {
 
 
   /* -------------------------------------------------------------------------- */
-  /*                      MIDDLEWARE AUTORIZE                                   */
+  /*                      AUTORIZATION                                          */
   /* -------------------------------------------------------------------------- */
 
 export const verifyToken = (req, res, next) => {

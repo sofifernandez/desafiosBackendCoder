@@ -62,6 +62,7 @@ export const deleteProducts =async (req, res) => {
   const updatedCart = await c.deleteProd(id, idProd)
   res.status(200).json({ "mensaje": 'success' })
 } 
+
 export const confirmPurchase= async (req, res) => {
   const id = req.params.id
   const cart = await c.getCartById(id);

@@ -9,19 +9,11 @@ import mongoStore from "connect-mongo";
 import session from "express-session";
 import cookieParser from "cookie-parser";
 import logger from './utils/logger.js';
-//import minimist from 'minimist';
-
-
+import minimist from "minimist";
+const argv = minimist(process.argv.slice(2));
+const { puerto } = argv
 
 dotenv.config();
-const options = {
-   default: {
-      PORT: 8000
-   }
-}
-
-// const arg = minimist(process.argv.slice(2), options);
-// const PORT = arg.port;
 
 // Rutas
 import routerProd from "./routes/product.routes.js";
@@ -37,15 +29,6 @@ app.use(express.urlencoded({ extended: true }));
 //app.use(compression());
 app.use(cookieParser());
 app.use(cors({ credentials: true, origin: true }))
-
-
-// app.use(function (req, res, next) {
-//     res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//     res.header("Access-Control-Allow-Credentials", true); // allows cookie to be sent
-//     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, HEAD, DELETE"); // you must specify the methods used with credentials. "*" will not work. 
-//     next();
-// });
 
 const io = new Server(server, {
    cors: {
@@ -81,15 +64,6 @@ app.use('/api/productos', routerProd)
 app.use('/api/carrito', routerCart)
 app.use('/api/user', userRouter)
 app.use('/api/info', routerInfo)
-
-// const io = new Server(server, {
-//    cors: {
-//       origin: "http://localhost:3000",
-//       methods: ["GET", "POST"],
-//       allowedHeaders: ["my-custom-header"],
-//       credentials: true
-//    }
-// })
 
 
 app.use(session({
@@ -130,11 +104,6 @@ io.on("connection", async (socket) => {
    const oldMessages = await chat.getAllChats()  //Obtener chats guardados
    socket.emit("sendMessages", oldMessages)   //Enviar chats guardados al Front:
 
-   // socket.on("getUser", async (userEmail) => {
-   //    console.log(userEmail)
-   //    const oldMessages = await chat.getAllChats()  //Obtener chats guardados
-   //    socket.emit("sendMessages", oldMessages)   //Enviar chats guardados al Front:
-   // })
 
    socket.on("fromFront", async (newMessage) => {  // Obtener los nuevos chats desde el front
       newMessage.created_at = new Date().toLocaleString();
@@ -145,7 +114,6 @@ io.on("connection", async (socket) => {
    });
 })
 //*********************************************************************************************************
-
 
 
 app.get('/', (req, res) => {
@@ -160,6 +128,15 @@ app.all('*', (req, res) => { //MENSAJE PARA RUTA NO IMPLEMENTADA:
    res.status(501).json({ error: -2, descripcion: `Ruta no implementada` })
 })
 logger.info(process.argv)
-const PORT = parseInt(process.argv[2]) || 8080;
+const PORT = parseInt(puerto) || 8080;
 server.listen(PORT, () => console.log(`🚀 Server started on port http://localhost:${PORT} - process ${process.pid}`));
 server.on('error', (err) => logger.error(`error ${err}`));
+
+
+// app.use(function (req, res, next) {
+//     res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     res.header("Access-Control-Allow-Credentials", true); // allows cookie to be sent
+//     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, HEAD, DELETE"); // you must specify the methods used with credentials. "*" will not work. 
+//     next();
+// });

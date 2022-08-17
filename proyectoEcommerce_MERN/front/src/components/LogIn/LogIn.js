@@ -1,3 +1,4 @@
+import './LogIn.scss'
 import { useState, useEffect } from "react";
 import { Chat } from '../Chat/Chat'
 import { ProductForm } from "../ProductForm/ProductForm";
@@ -47,6 +48,8 @@ export const LogIn = () => {
     };
     //------------------------------------------------------------
 
+
+
     //SUBMIT FORMS-*****************************************************
     const onHandleLogIn = async (e) => {
         e.preventDefault()
@@ -61,13 +64,15 @@ export const LogIn = () => {
         })
 
         const resJSON = await res.json()
+        console.log(resJSON)
         if (!resJSON) {
             setErrLogIn(true)
         } else {
             setUser(resJSON.user)
+            await getUser()
+            window.location.reload()
         }
-        await getUser()
-        window.location.reload()
+        
     };
 
     const onHandleRegister = async (e) => {
@@ -87,9 +92,10 @@ export const LogIn = () => {
         } else {
             setUser(resJSON.user)
             setErrSignUp(false)
+            await getUser()
+            window.location.reload()
         }
-        await getUser()
-        window.location.reload()
+        
     }
 
     const onHandleLogOut = async (e) => {
@@ -123,8 +129,8 @@ export const LogIn = () => {
                     <div className="col-11 mb-2 row justify-content-center">
                         <input className="mb-2" type="text" name="email" placeholder="email usuario" onChange={handleFormLogIn} />
                         <input className="mb-2" type="text" name="password" placeholder="Contraseña" onChange={handleFormLogIn} />
-                        <button type='submit' className='mt-1 col-5 btnCheckout mb-3 fs-4' onClick={onHandleLogIn}>Log in</button>
-                        <button type='submit' className='mt-1 col-5 btnCheckout mb-3 fs-4' onClick={onHandleLogOut}>Log out</button>
+                        <button type='submit' className='mt-1 col-5 btnCheckout mx-2 mb-3 fs-4' id='btnLogIn' onClick={onHandleLogIn}>Log in</button>
+                        <button type='submit' className='mt-1 col-5 btnCheckout mx-2 mb-3 fs-4' id='btnLogOut' onClick={onHandleLogOut}>Log out</button>
                     </div>
                 </form>
                 {errLogIn ? <div className="row justify-content-center text-center">Usuario o contraseña incorrecto!</div> : null}

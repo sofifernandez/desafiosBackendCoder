@@ -1,1 +1,26 @@
 
+{
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-17T12:32:43.942Z'
+}
+{
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-17T12:36:40.302Z'
+}
+{
+  message: 'GET  - /favicon.ico - INEXISTENTE.',
+  level: 'warn',
+  timestamp: '2022-08-17T12:56:27.198Z'
+}
+{
+  message: 'Error: Password is not valid-Error in sign in',
+  level: 'error',
+  timestamp: '2022-08-17T13:41:27.481Z'
+}
+{
+  message: 'Error: Password is not valid-Error in sign in',
+  level: 'error',
+  timestamp: '2022-08-17T14:49:13.762Z'
+}

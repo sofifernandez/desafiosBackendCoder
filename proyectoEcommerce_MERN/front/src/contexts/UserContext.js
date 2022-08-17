@@ -29,7 +29,7 @@ export const UserProvider = ({ children }) => {
             setUser(false)
             console.log('no user')
         } else {
-            console.log(res.user)
+            //console.log(res.user)
             setUser(res.user)
         }
     }
